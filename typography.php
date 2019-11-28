@@ -10,7 +10,6 @@ echo "</script>";
  ?>
 <!DOCTYPE html>
 <html lang="en">
-
  
 <head>
     <!-- Required meta tags -->
@@ -20,10 +19,9 @@ echo "</script>";
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="../assets/vendor/bootstrap/css/bootstrap.min.css">
     <link href="../assets/vendor/fonts/circular-std/style.css" rel="stylesheet">
-    <link rel="stylesheet" href="../assets/libs/css/style.css">
     <link rel="stylesheet" href="../assets/vendor/fonts/fontawesome/css/fontawesome-all.css">
+    <link rel="stylesheet" href="../assets/libs/css/style.css">
     <script type="text/javascript" language="javascript" src="../documentation/js/more.js"></script>
-
 </head>
 
 <body>
@@ -34,7 +32,7 @@ echo "</script>";
          <!-- ============================================================== -->
         <!-- navbar -->
         <!-- ============================================================== -->
-         <div class="dashboard-header">
+        <div class="dashboard-header">
             <nav class="navbar navbar-expand-lg bg-white fixed-top">
                 <img src="../assets/images/logo.png" height="40px" width="40px" margin_left="20px">
                 <a class="navbar-brand" href="../index.php">DOUIRI FRERES</a>
@@ -66,8 +64,7 @@ echo "</script>";
                                             <a href="#" class="list-group-item list-group-item-action">
                                                 <div class="notification-info">
                                                     <div class="notification-list-user-img"><img src="../assets/images/avatar-3.jpg" alt="" class="user-avatar-md rounded-circle"></div>
-                                                    <div class="notification-list-user-block"><span class="notification-list-user-name">
-John Abraham</span>is now following you
+                                                    <div class="notification-list-user-block"><span class="notification-list-user-name">John Abraham</span>is now following you
                                                         <div class="notification-date">2 days ago</div>
                                                     </div>
                                                 </div>
@@ -132,8 +129,7 @@ John Abraham</span>is now following you
                             <a class="nav-link nav-user-img" href="#" id="navbarDropdownMenuLink2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="../assets/images/avatar-1.jpg" alt="" class="user-avatar-md rounded-circle"></a>
                             <div class="dropdown-menu dropdown-menu-right nav-user-dropdown" aria-labelledby="navbarDropdownMenuLink2">
                                 <div class="nav-user-info">
-                                    <h5 class="mb-0 text-white nav-user-name">
-John Abraham</h5>
+                                    <h5 class="mb-0 text-white nav-user-name">John Abraham</h5>
                                     <span class="status"></span><span class="ml-2">Available</span>
                                 </div>
                                 <a class="dropdown-item" href="#"><i class="fas fa-user mr-2"></i>Account</a>
@@ -446,201 +442,312 @@ John Abraham</h5>
         <!-- ============================================================== -->
         <!-- wrapper  -->
         <!-- ============================================================== -->
-        <form method="post" action="supprimerpromo.php" onsubmit="return control()" name="f">
         <div class="dashboard-wrapper">
-            <div class="container-fluid dashboard-content">
-                <!-- ============================================================== -->
-                <!-- pageheader -->
-                <!-- ============================================================== -->
-                <div class="row">
-                    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-                        <div class="page-header">
-                            <h3 class="pageheader-title" align="center">supprimer promo</h3>
-                            <!--<p class="pageheader-text">Proin placerat ante duiullam scelerisque a velit ac porta, fusce sit amet vestibulum mi. Morbi lobortis pulvinar quam.</p>
-                            <div class="page-breadcrumb">
-                                <nav aria-label="breadcrumb">
-                                    <ol class="breadcrumb">
-                                        <li class="breadcrumb-item"><a href="#" class="breadcrumb-link">menu</a></li>
-                                        <li class="breadcrumb-item"><a href="#" class="breadcrumb-link">promo & fidelisation</a></li>
-                                        <li class="breadcrumb-item active" aria-current="page">supprimer promo</li>
-                                    </ol>
-                                </nav>
+            <div class="container-fluid dashboard-content ">
+             
+                    <div class="row">
+                        <div class="col-xl-10">
+                            <!-- ============================================================== -->
+                            <!-- pageheader  -->
+                            <!-- ============================================================== -->
+                            <div class="row">
+                                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                                    <div class="page-header" id="top">
+                                        <h2 class="pageheader-title">gestion de la fidelisation</h2>
+                                        <p class="pageheader-text">Proin placerat ante duiullam scelerisque a velit ac porta, fusce sit amet vestibulum mi. Morbi lobortis pulvinar quam.</p>
+                                        <div class="page-breadcrumb">
+                                            <nav aria-label="breadcrumb">
+                                                <ol class="breadcrumb">
+                                                    <li class="breadcrumb-item"><a href="#" class="breadcrumb-link">Dashboard</a></li>
+                                                    <li class="breadcrumb-item"><a href="#" class="breadcrumb-link">promo&fidelisation</a></li>
+                                                    <li class="breadcrumb-item active" aria-current="page">gestion de fidelisation</li>
+                                                </ol>
+                                            </nav>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- ============================================================== -->
+                            <!-- end pageheader  -->
+                            <!-- ============================================================== -->
+                            <!-- ============================================================== -->
+                            <!-- overview  -->
+                            <!-- ============================================================== -->
+                            <!--<div class="page-section" id="overview">
+                                <div class="row">
+                                    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                                        <h2>Overview</h2>
+                                        <p class="lead">Nam pulvinar interdum turpis a mattis. Etiam augue leo, mollis a massa sagittis, egestas pretium risus. Aliquam auctor nibh mauris, at fringilla elit lobortis sodales. Praesent volutpat felis et placerat elementum. </p>
+                                        <ul class="list-unstyled arrow">
+                                            <li> Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+                                            <li>Mauris bibendum massa ut porttitor congue.</li>
+                                            <li>Morbi condimentum magna eget facilisis accumsan.</li>
+                                            <li>Proin euismod eros nec libero efficitur, a dapibus mauris condimentum. </li>
+                                        </ul>
+                                    </div>
+                                </div>
                             </div>-->
-                        </br></br></br>
-                            <table align="center">
-                                 <tr>
-                                    <td>reference</td>
-                                    <td ><input id="champ" type="text" name="ref"></td>
-                                </tr>
-                                <tr>
-                                    <td></td>
-                                    <td><input type="submit" name="supprimer"></td>
-                                </tr>
-                                
-                            </table>
+                            <!-- ============================================================== -->
+                            <!-- end overview  -->
+                            <!-- ============================================================== -->
+                            <!--<div class="row">
+                                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">-->
+                                    <!-- ============================================================== -->
+                                    <!-- headings  -->
+                                    <!-- ============================================================== -->
+                                    <!--<div class="card" id="headings">
+                                        <h5 class="card-header">Headings</h5>
+                                        <div class="card-body">
+                                            <h1>h1. Bootstrap heading</h1>
+                                            <h2>h2. Bootstrap heading</h2>
+                                            <h3>h3. Bootstrap heading</h3>
+                                            <h4>h4. Bootstrap heading</h4>
+                                            <h5>h5. Bootstrap heading</h5>
+                                            <h6>h6. Bootstrap heading</h6>
+                                        </div>
+                                    </div>-->
+                                    <!-- ============================================================== -->
+                                    <!-- end headings  -->
+                                    <!-- ============================================================== -->
+                                <!--</div>
+                            </div>-->
+                            <!-- ============================================================== -->
+                            <!-- display headings  -->
+                            <!-- ============================================================== -->
+                            <!--<div class="row">
+                                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                                    <div class="card" id="d-heading">
+                                        <h5 class="card-header">Display Headings</h5>
+                                        <div class="card-body">
+                                            <h1 class="display-1">Display 1</h1>
+                                            <h1 class="display-2">Display 2</h1>
+                                            <h1 class="display-3">Display 3</h1>
+                                            <h1 class="display-4">Display 4</h1>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>-->
+                            <!-- ============================================================== -->
+                            <!-- end display headings  -->
+                            <!-- ============================================================== -->
 
-                        </div>
+                            <div class="row">
+                                <!-- ============================================================== -->
+                                <!-- body text  -->
+                                <!-- ============================================================== -->
+                                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                                    <div class="card" id="text">
+                                        <h5 class="card-header">parametres</h5>
+                                        <div class="card-body">
+                                            <form method="post" onsubmit="return control()" name="f">
+                                            <table align="Center" width="75%">
+                                                <tr>
+                                                    <td align="Center" class="lead">nombre des points</td>
+                                                </tr>
+                                                <tr>
+                                                    <td align="Center"><input id="champ" type="number" name="vall"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td align="Center">
+                                                        <input type="submit" name="affecter">
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                            </form>
+                                            <p>Remarque: cette indice indique le minimum des point pour etre un client fidele.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <?php 
+                            include '../../core/fidelc.php';
+                            include '../../entities/promo.php';
+                            if (isset($_POST['affecter']) and isset($_POST['vall'])) {
+                                $valpoint=$_POST['vall'];
+                                $var1=new variable($valpoint);
+                                $var1c=new fidelc;
+                                $var1c->modifierfidelisation($var1);
+                            }
+                            ?>  
+                                <!-- ============================================================== -->
+                                <!-- end body text  -->
+                                <!-- ============================================================== -->
+                            </div>
+                            <!-- ============================================================== -->
+                            <!-- alignment  -->
+                            <!-- ============================================================== -->
+                            <!--<div class="row">
+                                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                                    <div class="card" id="align">
+                                        <h5 class="card-header">Alignment</h5>
+                                        <div class="card-body">
+                                            <h3 class="text-left">Left aligned text.</h3>
+                                            <p class="text-left">Pellentesque vulputate arcu sed risus auctor tincidunt. Morbi eget massa turpis. Fusce aliquet dolor eu posuere tincidunt. Fusce ultricies luctus dui, dapibus pharetra risus semper non. .</p>
+                                        </div>
+                                        <div class="card-body border-top">
+                                            <h3 class="text-center">Center aligned text.</h3>
+                                            <p class="text-center">Pellentesque vulputate arcu sed risus auctor tincidunt. Morbi eget massa turpis. Fusce aliquet dolor eu posuere tincidunt. Fusce ultricies luctus dui, dapibus pharetra risus semper non. .</p>
+                                        </div>
+                                        <div class="card-body border-top">
+                                            <h3 class="text-right">Right aligned text.</h3>
+                                            <p class="text-right">Pellentesque vulputate arcu sed risus auctor tincidunt. Morbi eget massa turpis. Fusce aliquet dolor eu posuere tincidunt. Fusce ultricies luctus dui, dapibus pharetra risus semper non. .</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>-->
+                            <!-- ============================================================== -->
+                            <!-- end alignment  -->
+                            <!-- ============================================================== -->
+                            <!--<div class="row">-->
+                                <!-- ============================================================== -->
+                                <!-- unordered list  -->
+                                <!-- ============================================================== -->
+                                <!--<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                                    <div class="card" id="u-list">
+                                        <h5 class="card-header">Unordered list</h5>
+                                        <div class="card-body">
+                                            <ul>
+                                                <li>Lorem ipsum dolor sit amet</li>
+                                                <li>Consectetur adipiscing elit</li>
+                                                <li>Integer molestie lorem at massa</li>
+                                                <li>Facilisis in pretium nisl aliquet</li>
+                                                <li>Nulla volutpat aliquam velit
+                                                    <ul>
+                                                        <li>Phasellus iaculis neque</li>
+                                                        <li>Purus sodales ultricies</li>
+                                                        <li>Vestibulum laoreet porttitor sem</li>
+                                                        <li>Ac tristique libero volutpat at</li>
+                                                    </ul>
+                                                </li>
+                                                <li>Faucibus porta lacus fringilla vel</li>
+                                                <li>Aenean sit amet erat nunc</li>
+                                                <li>Eget porttitor lorem</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>-->
+                                <!-- ============================================================== -->
+                                <!-- end unorderd list  -->
+                                <!-- ============================================================== -->
+                            <!--</div>
+                            <div class="row">-->
+                                <!-- ============================================================== -->
+                                <!-- ordered list  -->
+                                <!-- ============================================================== -->
+                                <!--<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                                    <div class="card" id="o-list">
+                                        <h5 class="card-header">Ordered list</h5>
+                                        <div class="card-body">
+                                            <ol>
+                                                <li>Lorem ipsum dolor sit amet</li>
+                                                <li>Consectetur adipiscing elit</li>
+                                                <li>Integer molestie lorem at massa</li>
+                                                <li>Facilisis in pretium nisl aliquet</li>
+                                                <li>Nulla volutpat aliquam velit</li>
+                                                <li>Phasellus iaculis neque</li>
+                                                <li>Purus sodales ultricies</li>
+                                                <li>Vestibulum laoreet porttitor sem</li>
+                                                <li>Ac tristique libero volutpat at</li>
+                                                <li>Faucibus porta lacus fringilla vel</li>
+                                                <li>Aenean sit amet erat nunc</li>
+                                                <li>Eget porttitor lorem</li>
+                                            </ol>
+                                        </div>
+                                    </div>
+                                </div>-->
+                                <!-- ============================================================== -->
+                                <!-- end ordered list  -->
+                                <!-- ============================================================== -->
+                            <!--</div>
+                            <div class="row">
+                                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">-->
+                                    <!-- ============================================================== -->
+                                    <!-- unstyled  -->
+                                    <!-- ============================================================== -->
+                                    <!--<div class="card" id="un-list">
+                                        <h5 class="card-header">Unstyled</h5>
+                                        <div class="card-body">
+                                            <ul class="list-unstyled">
+                                                <li>Lorem ipsum dolor sit amet</li>
+                                                <li>Consectetur adipiscing elit</li>
+                                                <li>Integer molestie lorem at massa</li>
+                                                <li>Facilisis in pretium nisl aliquet</li>
+                                                <li>Nulla volutpat aliquam velit</li>
+                                                <li>Phasellus iaculis neque</li>
+                                                <li>Purus sodales ultricies</li>
+                                                <li>Vestibulum laoreet porttitor sem</li>
+                                                <li>Ac tristique libero volutpat at</li>
+                                                <li>Faucibus porta lacus fringilla vel</li>
+                                                <li>Aenean sit amet erat nunc</li>
+                                                <li>Eget porttitor lorem</li>
+                                            </ul>
+                                        </div>
+                                    </div>-->
+                                    <!-- ============================================================== -->
+                                    <!-- end unstyled  -->
+                                    <!-- ============================================================== -->
+                                <!--</div>
+                            </div>-->
+                            <!--<div class="row">
+                                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">-->
+                                    <!-- ============================================================== -->
+                                    <!-- list styled  -->
+                                    <!-- ============================================================== -->
+                                    <!--<div class="card" id="styled-list">
+                                        <h5 class="card-header">List Styled</h5>
+                                        <div class="card-body">
+                                            <ul class="list-unstyled arrow">
+                                                <li>Lorem ipsum dolor sit amet</li>
+                                                <li>Consectetur adipiscing elit</li>
+                                                <li>Integer molestie lorem at massa</li>
+                                                <li>Facilisis in pretium nisl aliquet</li>
+                                                <li>Nulla volutpat aliquam velit</li>
+                                                <li>Phasellus iaculis neque</li>
+                                                <li>Purus sodales ultricies</li>
+                                                <li>Vestibulum laoreet porttitor sem</li>
+                                                <li>Ac tristique libero volutpat at</li>
+                                                <li>Faucibus porta lacus fringilla vel</li>
+                                                <li>Aenean sit amet erat nunc</li>
+                                                <li>Eget porttitor lorem</li>
+                                            </ul>
+                                        </div>
+                                    </div>-->
+                                    <!-- ============================================================== -->
+                                    <!-- end list styled  -->
+                                    <!-- ============================================================== -->
+                                <!--</div>
+                            </div>-->
+                           
+                        <!--<div class="col-xl-2 col-lg-2 col-md-6 col-sm-12 col-12 ">-->
+                            <!-- ============================================================== -->
+                            <!--side navbar  -->
+                            <!-- ============================================================== -->
+                            <!--<div class="sidebar-nav-fixed">
+                                <ul class="list-unstyled">
+                                    <li><a href="#overview" class="active">Overview</a></li>
+                                    <li><a href="#headings">Headings</a></li>
+                                    <li><a href="#d-heading">Display Headings</a></li>
+                                    <li><a href="#text">Body Text</a></li>
+                                    <li><a href="#align">Alignment</a></li>
+                                    <li><a href="#u-list">Unordered list</a></li>
+                                    <li><a href="#o-list">Ordered list</a></li>
+                                    <li><a href="#un-list">Unstyled list</a></li>
+                                    <li><a href="#styled-list">Styled list</a></li>
+                                    <li><a href="#text-elements">Inline text elements</a></li>
+                                    <li><a href="#blockquote">Blockquote</a></li>
+                                    <li><a href="#top">Back to Top</a></li>
+                                </ul>
+                            </div>-->
+                            <!-- ============================================================== -->
+                            <!-- side navbar  -->
+                            <!-- ============================================================== -->
+                        <!--</div>-->
                     </div>
-                </div>
-                </form>
-
-
-                <!-- ============================================================== -->
-                <!-- end pageheader -->
-                <!-- ============================================================== -->
-                <!--<div class="row">-->
-                    <!-- ============================================================== -->
-                    <!--  slides only  -->
-                    <!-- ============================================================== -->
-                    <!--<div class="col-xl-6 col-lg-12 col-md-12 col-sm-12 col-12">
-                        <div class="card">
-                            <h5 class="card-header">Slides only</h5>
-                            <div class="card-body">
-                                <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
-                                    <div class="carousel-inner">
-                                        <div class="carousel-item active">
-                                            <img class="d-block w-100" src="../assets/images/card-img-1.jpg" alt="First slide">
-                                        </div>
-                                        <div class="carousel-item">
-                                            <img class="d-block w-100" src="../assets/images/card-img-2.jpg" alt="Second slide">
-                                        </div>
-                                        <div class="carousel-item">
-                                            <img class="d-block w-100" src="../assets/images/card-img-3.jpg" alt="Third slide">
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>-->
-                    <!-- ============================================================== -->
-                    <!--  end slides only  -->
-                    <!-- ============================================================== -->
-                    <!-- ============================================================== -->
-                    <!--  slides with control  -->
-                    <!-- ============================================================== -->
-                    <!--<div class="col-xl-6 col-lg-12 col-md-12 col-sm-12 col-12">
-                        <div class="card">
-                            <h5 class="card-header">Slides with Controls</h5>
-                            <div class="card-body">
-                                <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
-                                    <div class="carousel-inner">
-                                        <div class="carousel-item active">
-                                            <img class="d-block w-100" src="../assets/images/card-img-1.jpg" alt="First slide">
-                                        </div>
-                                        <div class="carousel-item">
-                                            <img class="d-block w-100" src="../assets/images/card-img-2.jpg" alt="Second slide">
-                                        </div>
-                                        <div class="carousel-item">
-                                            <img class="d-block w-100" src="../assets/images/card-img-3.jpg" alt="Third slide">
-                                        </div>
-                                    </div>
-                                    <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-                                   <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                         <span class="sr-only">Previous</span>   </a>
-                                    <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-                                       <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                   <span class="sr-only">Next</span>  </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>-->
-                    <!-- ============================================================== -->
-                    <!--  end slides with control  -->
-                    <!-- ============================================================== -->
-                <!--</div>
-                <div class="row">-->
-                    <!-- ============================================================== -->
-                    <!--  slides with indicator  -->
-                    <!-- ============================================================== -->
-                    <!--<div class="col-xl-6 col-lg-12 col-md-12 col-sm-12 col-12">
-                        <div class="card">
-                            <h5 class="card-header">Slides with Indicators</h5>
-                            <div class="card-body">
-                                <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-                                    <ol class="carousel-indicators">
-                                        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-                                        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-                                        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-                                    </ol>
-                                    <div class="carousel-inner">
-                                        <div class="carousel-item active">
-                                            <img class="d-block w-100" src="../assets/images/card-img-1.jpg" alt="First slide">
-                                        </div>
-                                        <div class="carousel-item">
-                                            <img class="d-block w-100" src="../assets/images/card-img-2.jpg" alt="Second slide">
-                                        </div>
-                                        <div class="carousel-item">
-                                            <img class="d-block w-100" src="../assets/images/card-img-3.jpg" alt="Third slide">
-                                        </div>
-                                    </div>
-                                    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-                                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                       <span class="sr-only">Previous</span>  </a>
-                                    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-                                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                            <span class="sr-only">Next</span>  </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>-->
-                    <!-- ============================================================== -->
-                    <!-- end slides with indicator  -->
-                    <!-- ============================================================== -->
-                    <!-- ============================================================== -->
-                    <!--  slides with control  -->
-                    <!-- ============================================================== -->
-                    <!--<div class="col-xl-6 col-lg-12 col-md-12 col-sm-12 col-12">
-                        <div class="card">
-                            <h5 class="card-header">Slides with Captions</h5>
-                            <div class="card-body">
-                                <div id="carouselExampleIndicators1" class="carousel slide" data-ride="carousel">
-                                    <ol class="carousel-indicators">
-                                        <li data-target="#carouselExampleIndicators1" data-slide-to="0" class="active"></li>
-                                        <li data-target="#carouselExampleIndicators1" data-slide-to="1"></li>
-                                        <li data-target="#carouselExampleIndicators1" data-slide-to="2"></li>
-                                    </ol>
-                                    <div class="carousel-inner">
-                                        <div class="carousel-item active">
-                                            <img class="d-block w-100" src="../assets/images/card-img-1.jpg" alt="First slide">
-                                            <div class="carousel-caption d-none d-md-block">
-                                                <h3 class="text-white">Heading Title Carousel</h3>
-                                                <p>Mauris fermentum elementum ligula in efficitur. Aliquam id congue lorem. Proin consectetur feugiat enim ut luctus. Aliquam pellentesque ut tellus ultricies bibendum.</p>
-                                            </div>
-                                        </div>
-                                        <div class="carousel-item">
-                                            <img class="d-block w-100" src="../assets/images/card-img-2.jpg" alt="Second slide">
-                                            <div class="carousel-caption d-none d-md-block">
-                                                <h3 class="text-white">Heading Title Carousel</h3>
-                                                <p>Mauris fermentum elementum ligula in efficitur. Aliquam id congue lorem. Proin consectetur feugiat enim ut luctus. Aliquam pellentesque ut tellus ultricies bibendum.</p>
-                                            </div>
-                                        </div>
-                                        <div class="carousel-item">
-                                            <img class="d-block w-100" src="../assets/images/card-img-3.jpg" alt="Third slide">
-                                            <div class="carousel-caption d-none d-md-block">
-                                                <h3 class="text-white">Heading Title Carousel</h3>
-                                                <p>Mauris fermentum elementum ligula in efficitur. Aliquam id congue lorem. Proin consectetur feugiat enim ut luctus. Aliquam pellentesque ut tellus ultricies bibendum.</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <a class="carousel-control-prev" href="#carouselExampleIndicators1" role="button" data-slide="prev">
-                                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                       <span class="sr-only">Previous</span>  </a>
-                                    <a class="carousel-control-next" href="#carouselExampleIndicators1" role="button" data-slide="next">
-                                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                            <span class="sr-only">Next</span>  </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>-->
-                    <!-- ============================================================== -->
-                    <!--  end slides with indicator  -->
-                    <!-- ============================================================== -->
-                </div>
+             
             </div>
             <!-- ============================================================== -->
             <!-- footer -->
             <!-- ============================================================== -->
-            <div class="footer">
+            <!--<div class="footer">
                 <div class="container-fluid">
                     <div class="row">
                         <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
@@ -655,7 +762,7 @@ John Abraham</h5>
                         </div>
                     </div>
                 </div>
-            </div>
+            </div>-->
             <!-- ============================================================== -->
             <!-- end footer -->
             <!-- ============================================================== -->
@@ -670,5 +777,5 @@ John Abraham</h5>
     <script src="../assets/vendor/slimscroll/jquery.slimscroll.js"></script>
     <script src="../assets/libs/js/main-js.js"></script>
 </body>
-
+ 
 </html>

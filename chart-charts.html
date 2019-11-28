@@ -5,16 +5,15 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Concept - Bootstrap 4 Admin Dashboard Template</title>
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="../assets/vendor/bootstrap/css/bootstrap.min.css">
     <link href="../assets/vendor/fonts/circular-std/style.css" rel="stylesheet">
     <link rel="stylesheet" href="../assets/libs/css/style.css">
     <link rel="stylesheet" href="../assets/vendor/fonts/fontawesome/css/fontawesome-all.css">
+    <title>Concept - Bootstrap 4 Admin Dashboard Template</title>
 </head>
 
 <body>
-
     <!-- ============================================================== -->
     <!-- main wrapper -->
     <!-- ============================================================== -->
@@ -138,7 +137,7 @@ John Abraham</h5>
         <!-- ============================================================== -->
         <!-- left sidebar -->
         <!-- ============================================================== -->
-      <div class="nav-left-sidebar sidebar-dark">
+       <div class="nav-left-sidebar sidebar-dark">
             <div class="menu-list">
                 <nav class="navbar navbar-expand-lg navbar-light">
                     <a class="d-xl-none d-lg-none" href="#">Dashboard</a>
@@ -151,50 +150,50 @@ John Abraham</h5>
                                 Menu
                             </li>
                             <li class="nav-item ">
-                                <a class="nav-link active" href="#" data-toggle="collapse" aria-expanded="false" data-target="#submenu-1" aria-controls="submenu-1"><i class="fa fa-fw fa-user-circle"></i>stock <span class="badge badge-success">6</span></a>
+                                <a class="nav-link active" href="#" data-toggle="collapse" aria-expanded="false" data-target="#submenu-1" aria-controls="submenu-1"><i class="fa fa-fw fa-user-circle"></i>Dashboard <span class="badge badge-success">6</span></a>
                                 <div id="submenu-1" class="collapse submenu" style="">
                                     <ul class="nav flex-column">
                                         <li class="nav-item">
-                                            <a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false" data-target="#submenu-1-2" aria-controls="submenu-1-2">modifier produit</a>
+                                            <a class="nav-link" href="index.html" data-toggle="collapse" aria-expanded="false" data-target="#submenu-1-2" aria-controls="submenu-1-2">E-Commerce</a>
                                             <div id="submenu-1-2" class="collapse submenu" style="">
                                                 <ul class="nav flex-column">
                                                     <li class="nav-item">
-                                                        <a class="nav-link" href="../concept-master/pages/blank-page.html">ajouter produit</a>
+                                                        <a class="nav-link" href="../index.html">E Commerce Dashboard</a>
                                                     </li>
                                                     <li class="nav-item">
-                                                        <a class="nav-link" href="ecommerce-product.html">supprimer produit</a>
-                                                    </li>
-                                                    <!--<li class="nav-item">
-                                                        <a class="nav-link" href="ecommerce-product-single.html">Product Single</a>
+                                                        <a class="nav-link" href="../ecommerce-product.html">Product List</a>
                                                     </li>
                                                     <li class="nav-item">
-                                                        <a class="nav-link" href="ecommerce-product-checkout.html">Product Checkout</a>
-                                                    </li>-->
+                                                        <a class="nav-link" href="../ecommerce-product-single.html">Product Single</a>
+                                                    </li>
+                                                    <li class="nav-item">
+                                                        <a class="nav-link" href="../ecommerce-product-checkout.html">Product Checkout</a>
+                                                    </li>
                                                 </ul>
                                             </div>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link" href="dashboard-finance.html">etat stock</a>
+                                            <a class="nav-link" href="../dashboard-finance.html">Finance</a>
                                         </li>
-                                       <!-- <li class="nav-item">
-                                            <a class="nav-link" href="dashboard-sales.html">Sales</a>
-                                        </li>-->
-                                        <!--<li class="nav-item">
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="../dashboard-sales.html">Sales</a>
+                                        </li>
+                                        <li class="nav-item">
                                             <a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false" data-target="#submenu-1-1" aria-controls="submenu-1-1">Infulencer</a>
                                             <div id="submenu-1-1" class="collapse submenu" style="">
                                                 <ul class="nav flex-column">
                                                     <li class="nav-item">
-                                                        <a class="nav-link" href="dashboard-influencer.html">verifier l'etat du stock</a>
+                                                        <a class="nav-link" href="../dashboard-influencer.html">Influencer</a>
                                                     </li>
                                                     <li class="nav-item">
-                                                        <a class="nav-link" href="influencer-finder.html">Influencer Finder</a>
+                                                        <a class="nav-link" href="../influencer-finder.html">Influencer Finder</a>
                                                     </li>
                                                     <li class="nav-item">
-                                                        <a class="nav-link" href="influencer-profile.html">Influencer Profile</a>
+                                                        <a class="nav-link" href="../influencer-profile.html">Influencer Profile</a>
                                                     </li>
                                                 </ul>
                                             </div>
-                                        </li>-->
+                                        </li>
                                     </ul>
                                 </div>
                             </li>
@@ -429,55 +428,122 @@ John Abraham</h5>
         <!-- ============================================================== -->
         <!-- wrapper  -->
         <!-- ============================================================== -->
-        <form method="post" action="../ajoutproduit.php">
         <div class="dashboard-wrapper">
-            <div class="container-fluid dashboard-content">
+            <div class="container-fluid  dashboard-content">
+                <!-- ============================================================== -->
+                <!-- pageheader -->
+                <!-- ============================================================== -->
                 <div class="row">
                     <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-                        <h3 class="text-center">ajouter nouveau produit</h3>
-                        <table align="center" width="50%" border="0">
-                            <tr>
-                                <td>nom</td>
-                                <td ><input  type="text" name="nom"></td>
-                            </tr>
-                            <tr>
-                                <td>prix</td>
-                                <td ><input  type="number" name="prix"></td>
-                            </tr>
-                            <tr>
-                                <td>quantité</td>
-                                <td ><input  type="text" name="quantite"></td>
-                            </tr>
-                            <tr>
-                                <td>ref</td>
-                                <td ><input  type="text" name="ref"></td>
-                            </tr>
-                            <tr>
-                                <td>couleur</td>
-                                <td ><input  type="text" name="couleur"></td>
-                            </tr>
-                            <tr>
-                                <td>categorie</td>
-                                <td >
-                                    <select name="categorie">
-                                        <option value="tissu">tissu</option>
-                                        <option value="galon">galon</option>
-                                        <option value="bouton">bouton</option>
-                                        <option value="strasses">strasses</option>
-                                        <option value="rideaux">accesoirs rideaux</option>
-                                    </select>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td></td>
-                                <td ><input  type="submit" value="ajouter"></td>
-                            </tr>
-                            
-                        </table>
+                        <div class="page-header">
+                            <h2 class="pageheader-title">Chart.js</h2>
+                            <p class="pageheader-text">Proin placerat ante duiullam scelerisque a velit ac porta, fusce sit amet vestibulum mi. Morbi lobortis pulvinar quam.</p>
+                            <div class="page-breadcrumb">
+                                <nav aria-label="breadcrumb">
+                                    <ol class="breadcrumb">
+                                        <li class="breadcrumb-item"><a href="#" class="breadcrumb-link">Dashboard</a></li>
+                                        <li class="breadcrumb-item"><a href="#" class="breadcrumb-link">Charts</a></li>
+                                        <li class="breadcrumb-item active" aria-current="page">Chart.js</li>
+                                    </ol>
+                                </nav>
+                            </div>
+                        </div>
                     </div>
                 </div>
+                <!-- ============================================================== -->
+                <!-- end pageheader -->
+                <!-- ============================================================== -->
+                <div class="row">
+                    <!-- ============================================================== -->
+                    <!-- line chart  -->
+                    <!-- ============================================================== -->
+                    <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
+                        <div class="card">
+                            <h5 class="card-header">Line Charts</h5>
+                            <div class="card-body">
+                                <canvas id="chartjs_line"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- ============================================================== -->
+                    <!-- end line chart  -->
+                    <!-- ============================================================== -->
+                    <!-- ============================================================== -->
+                    <!-- bar chart  -->
+                    <!-- ============================================================== -->
+                    <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
+                        <div class="card">
+                            <h5 class="card-header">Bar Charts</h5>
+                            <div class="card-body">
+                                <canvas id="chartjs_bar"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- ============================================================== -->
+                    <!-- end bar chart  -->
+                    <!-- ============================================================== -->
+                </div>
+                <div class="row">
+                    <!-- ============================================================== -->
+                    <!-- radar chart  -->
+                    <!-- ============================================================== -->
+                    <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
+                        <div class="card">
+                            <h5 class="card-header">Radar Charts</h5>
+                            <div class="card-body">
+                                <canvas id="chartjs_radar"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- ============================================================== -->
+                    <!-- end radar chart  -->
+                    <!-- ============================================================== -->
+                    <!-- ============================================================== -->
+                    <!-- polar chart  -->
+                    <!-- ============================================================== -->
+                    <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
+                        <div class="card">
+                            <h5 class="card-header">Polar Charts</h5>
+                            <div class="card-body">
+                                <canvas id="chartjs_polar"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- ============================================================== -->
+                    <!-- end polar chart  -->
+                    <!-- ============================================================== -->
+                </div>
+                <div class="row">
+                    <!-- ============================================================== -->
+                    <!-- pie chart  -->
+                    <!-- ============================================================== -->
+                    <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
+                        <div class="card">
+                            <h5 class="card-header">Pie Charts</h5>
+                            <div class="card-body">
+                                <canvas id="chartjs_pie"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- ============================================================== -->
+                    <!-- end pie chart  -->
+                    <!-- ============================================================== -->
+                    <!-- ============================================================== -->
+                    <!-- doughnut chart  -->
+                    <!-- ============================================================== -->
+                    <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
+                        <div class="card">
+                            <h5 class="card-header">Doughnut Charts</h5>
+                            <div class="card-body">
+                                <canvas id="chartjs_doughnut"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- ============================================================== -->
+                    <!-- end doughnut chart  -->
+                    <!-- ============================================================== -->
+                </div>
             </div>
-            </form>
             <!-- ============================================================== -->
             <!-- footer -->
             <!-- ============================================================== -->
@@ -509,7 +575,10 @@ John Abraham</h5>
     <script src="../assets/vendor/jquery/jquery-3.3.1.min.js"></script>
     <script src="../assets/vendor/bootstrap/js/bootstrap.bundle.js"></script>
     <script src="../assets/vendor/slimscroll/jquery.slimscroll.js"></script>
+    <script src="../assets/vendor/charts/charts-bundle/Chart.bundle.js"></script>
+    <script src="../assets/vendor/charts/charts-bundle/chartjs.js"></script>
     <script src="../assets/libs/js/main-js.js"></script>
 </body>
+
  
 </html>

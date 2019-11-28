@@ -11,18 +11,18 @@
     <link href="../assets/vendor/fonts/circular-std/style.css" rel="stylesheet">
     <link rel="stylesheet" href="../assets/libs/css/style.css">
     <link rel="stylesheet" href="../assets/vendor/fonts/fontawesome/css/fontawesome-all.css">
+    <link rel="stylesheet" href="../assets/vendor/bootstrap-select/css/bootstrap-select.css">
 </head>
 
 <body>
-
     <!-- ============================================================== -->
     <!-- main wrapper -->
     <!-- ============================================================== -->
     <div class="dashboard-main-wrapper">
-         <!-- ============================================================== -->
+        <!-- ============================================================== -->
         <!-- navbar -->
         <!-- ============================================================== -->
-         <div class="dashboard-header">
+        <div class="dashboard-header">
             <nav class="navbar navbar-expand-lg bg-white fixed-top">
                 <a class="navbar-brand" href="../index.html">Concept</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -138,7 +138,7 @@ John Abraham</h5>
         <!-- ============================================================== -->
         <!-- left sidebar -->
         <!-- ============================================================== -->
-      <div class="nav-left-sidebar sidebar-dark">
+        <div class="nav-left-sidebar sidebar-dark">
             <div class="menu-list">
                 <nav class="navbar navbar-expand-lg navbar-light">
                     <a class="d-xl-none d-lg-none" href="#">Dashboard</a>
@@ -151,50 +151,50 @@ John Abraham</h5>
                                 Menu
                             </li>
                             <li class="nav-item ">
-                                <a class="nav-link active" href="#" data-toggle="collapse" aria-expanded="false" data-target="#submenu-1" aria-controls="submenu-1"><i class="fa fa-fw fa-user-circle"></i>stock <span class="badge badge-success">6</span></a>
+                                <a class="nav-link active" href="#" data-toggle="collapse" aria-expanded="false" data-target="#submenu-1" aria-controls="submenu-1"><i class="fa fa-fw fa-user-circle"></i>Dashboard <span class="badge badge-success">6</span></a>
                                 <div id="submenu-1" class="collapse submenu" style="">
                                     <ul class="nav flex-column">
                                         <li class="nav-item">
-                                            <a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false" data-target="#submenu-1-2" aria-controls="submenu-1-2">modifier produit</a>
+                                            <a class="nav-link" href="index.html" data-toggle="collapse" aria-expanded="false" data-target="#submenu-1-2" aria-controls="submenu-1-2">E-Commerce</a>
                                             <div id="submenu-1-2" class="collapse submenu" style="">
                                                 <ul class="nav flex-column">
                                                     <li class="nav-item">
-                                                        <a class="nav-link" href="../concept-master/pages/blank-page.html">ajouter produit</a>
+                                                        <a class="nav-link" href="../index.html">E Commerce Dashboard</a>
                                                     </li>
                                                     <li class="nav-item">
-                                                        <a class="nav-link" href="ecommerce-product.html">supprimer produit</a>
-                                                    </li>
-                                                    <!--<li class="nav-item">
-                                                        <a class="nav-link" href="ecommerce-product-single.html">Product Single</a>
+                                                        <a class="nav-link" href="../ecommerce-product.html">Product List</a>
                                                     </li>
                                                     <li class="nav-item">
-                                                        <a class="nav-link" href="ecommerce-product-checkout.html">Product Checkout</a>
-                                                    </li>-->
+                                                        <a class="nav-link" href="../ecommerce-product-single.html">Product Single</a>
+                                                    </li>
+                                                    <li class="nav-item">
+                                                        <a class="nav-link" href="../ecommerce-product-checkout.html">Product Checkout</a>
+                                                    </li>
                                                 </ul>
                                             </div>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link" href="dashboard-finance.html">etat stock</a>
+                                            <a class="nav-link" href="../dashboard-finance.html">Finance</a>
                                         </li>
-                                       <!-- <li class="nav-item">
-                                            <a class="nav-link" href="dashboard-sales.html">Sales</a>
-                                        </li>-->
-                                        <!--<li class="nav-item">
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="../dashboard-sales.html">Sales</a>
+                                        </li>
+                                        <li class="nav-item">
                                             <a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false" data-target="#submenu-1-1" aria-controls="submenu-1-1">Infulencer</a>
                                             <div id="submenu-1-1" class="collapse submenu" style="">
                                                 <ul class="nav flex-column">
                                                     <li class="nav-item">
-                                                        <a class="nav-link" href="dashboard-influencer.html">verifier l'etat du stock</a>
+                                                        <a class="nav-link" href="../dashboard-influencer.html">Influencer</a>
                                                     </li>
                                                     <li class="nav-item">
-                                                        <a class="nav-link" href="influencer-finder.html">Influencer Finder</a>
+                                                        <a class="nav-link" href="../influencer-finder.html">Influencer Finder</a>
                                                     </li>
                                                     <li class="nav-item">
-                                                        <a class="nav-link" href="influencer-profile.html">Influencer Profile</a>
+                                                        <a class="nav-link" href="../influencer-profile.html">Influencer Profile</a>
                                                     </li>
                                                 </ul>
                                             </div>
-                                        </li>-->
+                                        </li>
                                     </ul>
                                 </div>
                             </li>
@@ -429,55 +429,322 @@ John Abraham</h5>
         <!-- ============================================================== -->
         <!-- wrapper  -->
         <!-- ============================================================== -->
-        <form method="post" action="../ajoutproduit.php">
         <div class="dashboard-wrapper">
             <div class="container-fluid dashboard-content">
+                <!-- ============================================================== -->
+                <!-- pageheader -->
+                <!-- ============================================================== -->
                 <div class="row">
                     <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-                        <h3 class="text-center">ajouter nouveau produit</h3>
-                        <table align="center" width="50%" border="0">
-                            <tr>
-                                <td>nom</td>
-                                <td ><input  type="text" name="nom"></td>
-                            </tr>
-                            <tr>
-                                <td>prix</td>
-                                <td ><input  type="number" name="prix"></td>
-                            </tr>
-                            <tr>
-                                <td>quantité</td>
-                                <td ><input  type="text" name="quantite"></td>
-                            </tr>
-                            <tr>
-                                <td>ref</td>
-                                <td ><input  type="text" name="ref"></td>
-                            </tr>
-                            <tr>
-                                <td>couleur</td>
-                                <td ><input  type="text" name="couleur"></td>
-                            </tr>
-                            <tr>
-                                <td>categorie</td>
-                                <td >
-                                    <select name="categorie">
-                                        <option value="tissu">tissu</option>
-                                        <option value="galon">galon</option>
-                                        <option value="bouton">bouton</option>
-                                        <option value="strasses">strasses</option>
-                                        <option value="rideaux">accesoirs rideaux</option>
-                                    </select>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td></td>
-                                <td ><input  type="submit" value="ajouter"></td>
-                            </tr>
-                            
-                        </table>
+                        <div class="page-header">
+                            <h2 class="pageheader-title">Bootstrap Select </h2>
+                            <p class="pageheader-text">Proin placerat ante duiullam scelerisque a velit ac porta, fusce sit amet vestibulum mi. Morbi lobortis pulvinar quam.</p>
+                            <div class="page-breadcrumb">
+                                <nav aria-label="breadcrumb">
+                                    <ol class="breadcrumb">
+                                        <li class="breadcrumb-item"><a href="#" class="breadcrumb-link">Dashboard</a></li>
+                                        <li class="breadcrumb-item"><a href="#" class="breadcrumb-link">Forms</a></li>
+                                        <li class="breadcrumb-item active" aria-current="page">Bootstrap Select</li>
+                                    </ol>
+                                </nav>
+                            </div>
+                        </div>
                     </div>
                 </div>
+                <!-- ============================================================== -->
+                <!-- end pageheader -->
+                <!-- ============================================================== -->
+                <!-- ============================================================== -->
+                <!-- bootstrap select -->
+                <!-- ============================================================== -->
+                <div class="row">
+                    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                        <div class="card ">
+                            <h5 class="card-header">Bootstrap Select</h5>
+                            <div class="card-body">
+                                <h5 class="card-title">Basic Select </h5>
+                                <select class="selectpicker">
+                                    <option>Mustard</option>
+                                    <option>Ketchup</option>
+                                    <option>Relish</option>
+                                </select>
+                            </div>
+                            <div class="card-body border-top">
+                                <h5 class="card-title">Select boxes with optgroups</h5>
+                                <select class="selectpicker">
+                                    <optgroup label="Picnic">
+                                        <option>Mustard</option>
+                                        <option>Ketchup</option>
+                                        <option>Relish</option>
+                                    </optgroup>
+                                    <optgroup label="Camping">
+                                        <option>Tent</option>
+                                        <option>Flashlight</option>
+                                        <option>Toilet Paper</option>
+                                    </optgroup>
+                                </select>
+                            </div>
+                            <div class="card-body border-top">
+                                <h5 class="card-title">Multiple select boxes</h5>
+                                <select class="selectpicker" multiple>
+                                    <option>Mustard</option>
+                                    <option>Ketchup</option>
+                                    <option>Relish</option>
+                                </select>
+                            </div>
+                            <div class="card-body border-top">
+                                <h5 class="card-title">Live search</h5>
+                                <select class="selectpicker" data-live-search="true">
+                                    <option data-tokens="ketchup mustard">Hot Dog, Fries and a Soda</option>
+                                    <option data-tokens="mustard">Burger, Shake and a Smile</option>
+                                    <option data-tokens="frosting">Sugar, Spice and all things nice</option>
+                                </select>
+                            </div>
+                            <div class="card-body border-top">
+                                <h5 class="card-title">Limit the number of selections</h5>
+                                <select class="selectpicker" multiple data-max-options="2">
+                                    <option>Mustard</option>
+                                    <option>Ketchup</option>
+                                    <option>Relish</option>
+                                </select>
+                                <select class="selectpicker" multiple>
+                                    <optgroup label="Condiments" data-max-options="2">
+                                        <option>Mustard</option>
+                                        <option>Ketchup</option>
+                                        <option>Relish</option>
+                                    </optgroup>
+                                    <optgroup label="Breads" data-max-options="2">
+                                        <option>Plain</option>
+                                        <option>Steamed</option>
+                                        <option>Toasted</option>
+                                    </optgroup>
+                                </select>
+                            </div>
+                            <div class="card-body border-top">
+                                <h5 class="card-title">Custom button text </h5>
+                                <select class="selectpicker" multiple title="Choose one of the following...">
+                                    <option>Mustard</option>
+                                    <option>Ketchup</option>
+                                    <option>Relish</option>
+                                </select>
+                            </div>
+                            <div class="card-body border-top">
+                                <h5 class="card-title">Selected text</h5>
+                                <select class="selectpicker">
+                                    <option title="Combo 1">Hot Dog, Fries and a Soda</option>
+                                    <option title="Combo 2">Burger, Shake and a Smile</option>
+                                    <option title="Combo 3">Sugar, Spice and all things nice</option>
+                                </select>
+                            </div>
+                            <div class="card-body border-top">
+                                <h5 class="card-title">Styling</h5>
+                                <select class="selectpicker" data-style="btn-primary">
+                                    <option>Mustard</option>
+                                    <option>Ketchup</option>
+                                    <option>Relish</option>
+                                </select>
+                                <select class="selectpicker" data-style="btn-secondary">
+                                    <option>Mustard</option>
+                                    <option>Ketchup</option>
+                                    <option>Relish</option>
+                                </select>
+                                <select class="selectpicker" data-style="btn-brand">
+                                    <option>Mustard</option>
+                                    <option>Ketchup</option>
+                                    <option>Relish</option>
+                                </select>
+                                <select class="selectpicker" data-style="btn-info">
+                                    <option>Mustard</option>
+                                    <option>Ketchup</option>
+                                    <option>Relish</option>
+                                </select>
+                                <select class="selectpicker" data-style="btn-success">
+                                    <option>Mustard</option>
+                                    <option>Ketchup</option>
+                                    <option>Relish</option>
+                                </select>
+                            </div>
+                            <div class="card-body border-top">
+                                <h5 class="card-title">Checkmark on selected option</h5>
+                                <select class="selectpicker show-tick">
+                                    <option>Mustard</option>
+                                    <option>Ketchup</option>
+                                    <option>Relish</option>
+                                </select>
+                            </div>
+                            <div class="card-body border-top">
+                                <h5 class="card-title">Menu arrow </h5>
+                                <select class="selectpicker show-menu-arrow">
+                                    <option>Mustard</option>
+                                    <option>Ketchup</option>
+                                    <option>Relish</option>
+                                </select>
+                            </div>
+                            <div class="card-body border-top">
+                                <h5 class="card-title">Style individual options</h5>
+                                <select class="selectpicker">
+                                    <option>Mustard</option>
+                                    <option class="special">Ketchup</option>
+                                    <option style="background: #5cb85c; color: #fff;">Relish</option>
+                                </select>
+                            </div>
+                            <div class="card-body border-top">
+                                <h5 class="card-title">Width ( 'auto', 'fit', '100px', '75%' )</h5>
+                                <select class="selectpicker" data-width="auto">
+                                    <option>Mustard</option>
+                                    <option>Ketchup</option>
+                                    <option>Relish</option>
+                                </select>
+                                <select class="selectpicker" data-width="fit">
+                                    <option>Mustard</option>
+                                    <option>Ketchup</option>
+                                    <option>Relish</option>
+                                </select>
+                                <select class="selectpicker" data-width="100px">
+                                    <option>Mustard</option>
+                                    <option>Ketchup</option>
+                                    <option>Relish</option>
+                                </select>
+                                <select class="selectpicker" data-width="75%">
+                                    <option>Mustard</option>
+                                    <option>Ketchup</option>
+                                    <option>Relish</option>
+                                </select>
+                            </div>
+                            <div class="card-body border-top">
+                                <h5 class="card-title">Customize options with icon</h5>
+                                <select class="selectpicker">
+                                    <option data-icon="fas fa-heart">Ketchup</option>
+                                    <option data-icon="fas fa-glass-martini">Mustard</option>
+                                    <option data-icon="fas fa-film">Relish</option>
+                                </select>
+                            </div>
+                            <div class="card-body border-top">
+                                <h5 class="card-title">Custom content</h5>
+                                <select class="selectpicker">
+                                    <option data-content="<span class='badge badge-primary'>Mustard</span>">Mustard</option>
+                                    <option data-content="<span class='badge badge-success'>Relish</span>">Relish</option>
+                                    <option data-content="<span class='badge badge-brand'>Ketchup</span>">Ketchup</option>
+                                </select>
+                            </div>
+                            <div class="card-body border-top">
+                                <h5 class="card-title">Subtext</h5>
+                                <select class="selectpicker" data-size="5">
+                                    <option data-subtext="Heinz">Ketchup</option>
+                                    <option data-subtext="Mitro">Mustard</option>
+                                    <option data-subtext="Laila">Ketchup</option>
+                                    <option data-subtext="Rim">Relish</option>
+                                </select>
+                            </div>
+                            <div class="card-body border-top">
+                                <h5 class="card-title">Menu Size</h5>
+                                <select class="selectpicker" data-size="5">
+                                    <option>Ketchup</option>
+                                    <option>Mustard</option>
+                                    <option>Ketchup</option>
+                                    <option>Relish</option>
+                                    <option>Ketchup</option>
+                                    <option>Mustard</option>
+                                    <option>Ketchup</option>
+                                    <option>Relish</option>
+                                    <option>Ketchup</option>
+                                    <option>Mustard</option>
+                                    <option>Ketchup</option>
+                                    <option>Relish</option>
+                                </select>
+                            </div>
+                            <div class="card-body border-top">
+                                <h5 class="card-title">Select/deselect all options</h5>
+                                <select class="selectpicker" multiple data-actions-box="true">
+                                    <option>Mustard</option>
+                                    <option>Ketchup</option>
+                                    <option>Relish</option>
+                                </select>
+                            </div>
+                            <div class="card-body border-top">
+                                <h5 class="card-title">Divider</h5>
+                                <select class="selectpicker" data-size="5">
+                                    <option>Mustard</option>
+                                    <option>Ketchup</option>
+                                    <option>Relish</option>
+                                    <option data-divider="true">-</option>
+                                    <option>Mustard</option>
+                                    <option>Ketchup</option>
+                                    <option>Relish</option>
+                                </select>
+                            </div>
+                            <div class="card-body border-top">
+                                <h5 class="card-title">Menu Header</h5>
+                                <select class="selectpicker" data-header="Select a condiment">
+                                    <option>Mustard</option>
+                                    <option>Ketchup</option>
+                                    <option>Relish</option>
+                                    <option>Mustard</option>
+                                    <option>Ketchup</option>
+                                    <option>Relish</option>
+                                </select>
+                            </div>
+                            <div class="card-body border-top">
+                                <h5 class="card-title">Container</h5>
+                                <div style="overflow:hidden;">
+                                    <select class="selectpicker">
+                                        <option>Mustard</option>
+                                        <option>Ketchup</option>
+                                        <option>Relish</option>
+                                    </select>
+                                    <select class="selectpicker" data-container="body">
+                                        <option>Mustard</option>
+                                        <option>Ketchup</option>
+                                        <option>Relish</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="card-body border-top">
+                                <h5 class="card-title">Dropup menu</h5>
+                                <select class="selectpicker dropup">
+                                    <option>Mustard</option>
+                                    <option>Ketchup</option>
+                                    <option>Relish</option>
+                                </select>
+                            </div>
+                            <div class="card-body border-top">
+                                <h5 class="card-title">Disabled </h5>
+                                <select class="selectpicker" disabled>
+                                    <option>Mustard</option>
+                                    <option>Ketchup</option>
+                                    <option>Relish</option>
+                                </select>
+                            </div>
+                            <div class="card-body border-top">
+                                <h5 class="card-title">Disabled options </h5>
+                                <select class="selectpicker">
+                                    <option>Mustard</option>
+                                    <option disabled>Ketchup</option>
+                                    <option>Relish</option>
+                                </select>
+                            </div>
+                            <div class="card-body border-top">
+                                <h5 class="card-title">Disabled option groups </h5>
+                                <select class="selectpicker test">
+                                    <optgroup label="Picnic" disabled>
+                                        <option>Mustard</option>
+                                        <option>Ketchup</option>
+                                        <option>Relish</option>
+                                    </optgroup>
+                                    <optgroup label="Camping">
+                                        <option>Tent</option>
+                                        <option>Flashlight</option>
+                                        <option>Toilet Paper</option>
+                                    </optgroup>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- ============================================================== -->
+                    <!-- bootstrap select -->
+                    <!-- ============================================================== -->
+                </div>
             </div>
-            </form>
             <!-- ============================================================== -->
             <!-- footer -->
             <!-- ============================================================== -->
@@ -501,6 +768,9 @@ John Abraham</h5>
             <!-- end footer -->
             <!-- ============================================================== -->
         </div>
+        <!-- ============================================================== -->
+        <!-- end wrapper -->
+        <!-- ============================================================== -->
     </div>
     <!-- ============================================================== -->
     <!-- end main wrapper -->
@@ -510,6 +780,9 @@ John Abraham</h5>
     <script src="../assets/vendor/bootstrap/js/bootstrap.bundle.js"></script>
     <script src="../assets/vendor/slimscroll/jquery.slimscroll.js"></script>
     <script src="../assets/libs/js/main-js.js"></script>
+    <script src="../assets/vendor/bootstrap-select/js/bootstrap-select.js"></script>
 </body>
- 
+
+
+<!-- Mirrored from jituchauhan.com/influence/landingpage/influence/pages/bootstrap-select.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 07 Nov 2018 20:46:56 GMT -->
 </html>

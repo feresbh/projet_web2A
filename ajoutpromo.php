@@ -1,4 +1,14 @@
-<!doctype html>
+<?php  session_start(); 
+ if (empty($_SESSION['id']))
+ {
+     echo "<script type='text/javascript'>";
+echo "alert('Please Login First');
+window.location.href='login.php';";
+echo "</script>";
+     
+ }
+ ?>
+<!DOCTYPE html>
 <html lang="en">
  
 <head>
@@ -11,6 +21,7 @@
     <link href="../assets/vendor/fonts/circular-std/style.css" rel="stylesheet">
     <link rel="stylesheet" href="../assets/libs/css/style.css">
     <link rel="stylesheet" href="../assets/vendor/fonts/fontawesome/css/fontawesome-all.css">
+    <script type="text/javascript" language="javascript" src="../documentation/js/more.js"></script>
 </head>
 
 <body>
@@ -24,7 +35,8 @@
         <!-- ============================================================== -->
          <div class="dashboard-header">
             <nav class="navbar navbar-expand-lg bg-white fixed-top">
-                <a class="navbar-brand" href="../index.html">Concept</a>
+                <img src="../assets/images/logo.png" height="40px" width="40px" margin_left="20px">
+                <a class="navbar-brand" href="../index.php">DOUIRI FRERES</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -54,7 +66,7 @@
                                                 <div class="notification-info">
                                                     <div class="notification-list-user-img"><img src="../assets/images/avatar-3.jpg" alt="" class="user-avatar-md rounded-circle"></div>
                                                     <div class="notification-list-user-block"><span class="notification-list-user-name">
-John Abraham</span>is now following you
+                                                    John Abraham</span>is now following you
                                                         <div class="notification-date">2 days ago</div>
                                                     </div>
                                                 </div>
@@ -120,12 +132,12 @@ John Abraham</span>is now following you
                             <div class="dropdown-menu dropdown-menu-right nav-user-dropdown" aria-labelledby="navbarDropdownMenuLink2">
                                 <div class="nav-user-info">
                                     <h5 class="mb-0 text-white nav-user-name">
-John Abraham</h5>
+                                    John Abraham</h5>
                                     <span class="status"></span><span class="ml-2">Available</span>
                                 </div>
                                 <a class="dropdown-item" href="#"><i class="fas fa-user mr-2"></i>Account</a>
                                 <a class="dropdown-item" href="#"><i class="fas fa-cog mr-2"></i>Setting</a>
-                                <a class="dropdown-item" href="#"><i class="fas fa-power-off mr-2"></i>Logout</a>
+                                <a class="dropdown-item" href="../../core/logout.php"><i class="fas fa-power-off mr-2"></i>Logout</a>
                             </div>
                         </li>
                     </ul>
@@ -138,7 +150,7 @@ John Abraham</h5>
         <!-- ============================================================== -->
         <!-- left sidebar -->
         <!-- ============================================================== -->
-      <div class="nav-left-sidebar sidebar-dark">
+     <div class="nav-left-sidebar sidebar-dark">
             <div class="menu-list">
                 <nav class="navbar navbar-expand-lg navbar-light">
                     <a class="d-xl-none d-lg-none" href="#">Dashboard</a>
@@ -155,14 +167,14 @@ John Abraham</h5>
                                 <div id="submenu-1" class="collapse submenu" style="">
                                     <ul class="nav flex-column">
                                         <li class="nav-item">
-                                            <a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false" data-target="#submenu-1-2" aria-controls="submenu-1-2">modifier produit</a>
+                                            <a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false" data-target="#submenu-1-2" aria-controls="submenu-1-2">modifier stock</a>
                                             <div id="submenu-1-2" class="collapse submenu" style="">
                                                 <ul class="nav flex-column">
                                                     <li class="nav-item">
-                                                        <a class="nav-link" href="../concept-master/pages/blank-page.html">ajouter produit</a>
+                                                        <a class="nav-link" href="pages/blank-page.html">ajouter produit</a>
                                                     </li>
                                                     <li class="nav-item">
-                                                        <a class="nav-link" href="ecommerce-product.html">supprimer produit</a>
+                                                        <a class="nav-link" href="pages/blank-page 2.html">supprimer produit</a>
                                                     </li>
                                                     <!--<li class="nav-item">
                                                         <a class="nav-link" href="ecommerce-product-single.html">Product Single</a>
@@ -174,7 +186,7 @@ John Abraham</h5>
                                             </div>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link" href="dashboard-finance.html">etat stock</a>
+                                            <a class="nav-link" href="affichier.php">etat stock</a>
                                         </li>
                                        <!-- <li class="nav-item">
                                             <a class="nav-link" href="dashboard-sales.html">Sales</a>
@@ -199,30 +211,31 @@ John Abraham</h5>
                                 </div>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false" data-target="#submenu-2" aria-controls="submenu-2"><i class="fa fa-fw fa-rocket"></i>UI Elements</a>
+                                <a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false" data-target="#submenu-2" aria-controls="submenu-2"><i class="fa fa-fw fa-rocket"></i>Promo & fidelisation</a>
                                 <div id="submenu-2" class="collapse submenu" style="">
                                     <ul class="nav flex-column">
+                                        <!--<li class="nav-item">
+                                            <a class="nav-link" href="pages/cards.html">Cards <span class="badge badge-secondary">New</span></a>
+                                        </li>-->
                                         <li class="nav-item">
-                                            <a class="nav-link" href="cards.html">Cards <span class="badge badge-secondary">New</span></a>
+                                            <a class="nav-link" href="ajoutpromo.php">ajouter promotion</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link" href="general.html">General</a>
+                                            <a class="nav-link" href="carousel.php">annuler promo</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link" href="carousel.html">Carousel</a>
+                                            <a class="nav-link" href="accordions.php">affichier la listte des promos</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link" href="listgroup.html">List Group</a>
+                                            <a class="nav-link" href="listgroup.php">Liste des clients fideles</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link" href="typography.html">Typography</a>
+                                            <a class="nav-link" href="typography.php">gerer la fidelisation</a>
                                         </li>
-                                        <li class="nav-item">
-                                            <a class="nav-link" href="accordions.html">Accordions</a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a class="nav-link" href="tabs.html">Tabs</a>
-                                        </li>
+                                        
+                                        <!--<li class="nav-item">
+                                            <a class="nav-link" href="pages/tabs.html">Tabs</a>
+                                        </li>-->
                                     </ul>
                                 </div>
                             </li>
@@ -231,22 +244,22 @@ John Abraham</h5>
                                 <div id="submenu-3" class="collapse submenu" style="">
                                     <ul class="nav flex-column">
                                         <li class="nav-item">
-                                            <a class="nav-link" href="chart-c3.html">C3 Charts</a>
+                                            <a class="nav-link" href="pages/chart-c3.html">C3 Charts</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link" href="chart-chartist.html">Chartist Charts</a>
+                                            <a class="nav-link" href="pages/chart-chartist.html">Chartist Charts</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link" href="chart-charts.html">Chart</a>
+                                            <a class="nav-link" href="pages/chart-charts.html">Chart</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link" href="chart-morris.html">Morris</a>
+                                            <a class="nav-link" href="pages/chart-morris.html">Morris</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link" href="chart-sparkline.html">Sparkline</a>
+                                            <a class="nav-link" href="pages/chart-sparkline.html">Sparkline</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link" href="chart-gauge.html">Guage</a>
+                                            <a class="nav-link" href="pages/chart-gauge.html">Guage</a>
                                         </li>
                                     </ul>
                                 </div>
@@ -256,13 +269,19 @@ John Abraham</h5>
                                 <div id="submenu-4" class="collapse submenu" style="">
                                     <ul class="nav flex-column">
                                         <li class="nav-item">
-                                            <a class="nav-link" href="form-elements.html">Form Elements</a>
+                                            <a class="nav-link" href="pages/form-elements.html">Form Elements</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link" href="form-validation.html">Parsely Validations</a>
+                                            <a class="nav-link" href="pages/form-validation.html">Parsely Validations</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link" href="multiselect.html">Multiselect</a>
+                                            <a class="nav-link" href="pages/multiselect.html">Multiselect</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="pages/datepicker.html">Date Picker</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="pages/bootstrap-select.html">Bootstrap Select</a>
                                         </li>
                                     </ul>
                                 </div>
@@ -272,10 +291,10 @@ John Abraham</h5>
                                 <div id="submenu-5" class="collapse submenu" style="">
                                     <ul class="nav flex-column">
                                         <li class="nav-item">
-                                            <a class="nav-link" href="general-table.html">General Tables</a>
+                                            <a class="nav-link" href="pages/general-table.html">General Tables</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link" href="data-tables.html">Data Tables</a>
+                                            <a class="nav-link" href="pages/data-tables.html">Data Tables</a>
                                         </li>
                                     </ul>
                                 </div>
@@ -284,53 +303,50 @@ John Abraham</h5>
                                 Features
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false" data-target="#submenu-6" aria-controls="submenu-6"><i class="fas fa-fw fa-file"></i>Pages</a>
+                                <a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false" data-target="#submenu-6" aria-controls="submenu-6"><i class="fas fa-fw fa-file"></i> Pages </a>
                                 <div id="submenu-6" class="collapse submenu" style="">
                                     <ul class="nav flex-column">
                                         <li class="nav-item">
-                                            <a class="nav-link" href="invoice.html">Invoice</a>
+                                            <a class="nav-link" href="pages/blank-page.html">Blank Page</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link" href="blank-page.html">Blank Page</a>
+                                            <a class="nav-link" href="pages/blank-page-header.html">Blank Page Header</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link" href="blank-page-header.html">Blank Page Header</a>
+                                            <a class="nav-link" href="pages/login.html">Login</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link" href="login.html">Login</a>
+                                            <a class="nav-link" href="pages/404-page.html">404 page</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link" href="404-page.html">404 page</a>
+                                            <a class="nav-link" href="pages/sign-up.html">Sign up Page</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link" href="sign-up.html">Sign up Page</a>
+                                            <a class="nav-link" href="pages/forgot-password.html">Forgot Password</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link" href="forgot-password.html">Forgot Password</a>
+                                            <a class="nav-link" href="pages/pricing.html">Pricing Tables</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link" href="pricing.html">Pricing Tables</a>
+                                            <a class="nav-link" href="pages/timeline.html">Timeline</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link" href="timeline.html">Timeline</a>
+                                            <a class="nav-link" href="pages/calendar.html">Calendar</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link" href="calendar.html">Calendar</a>
+                                            <a class="nav-link" href="pages/sortable-nestable-lists.html">Sortable/Nestable List</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link" href="sortable-nestable-lists.html">Sortable/Nestable List</a>
-                                        </li>
-                                       <li class="nav-item">
-                                            <a class="nav-link" href="widgets.html">Widgets</a>
+                                            <a class="nav-link" href="pages/widgets.html">Widgets</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link" href="media-object.html">Media Objects</a>
+                                            <a class="nav-link" href="pages/media-object.html">Media Objects</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link" href="cropper-image.html">Cropper</a>
+                                            <a class="nav-link" href="pages/cropper-image.html">Cropper</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link" href="color-picker.html">Color Picker</a>
+                                            <a class="nav-link" href="pages/color-picker.html">Color Picker</a>
                                         </li>
                                     </ul>
                                 </div>
@@ -340,16 +356,16 @@ John Abraham</h5>
                                 <div id="submenu-7" class="collapse submenu" style="">
                                     <ul class="nav flex-column">
                                         <li class="nav-item">
-                                            <a class="nav-link" href="inbox.html">Inbox</a>
+                                            <a class="nav-link" href="pages/inbox.html">Inbox</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link" href="email-details.html">Email Detail</a>
+                                            <a class="nav-link" href="pages/email-details.html">Email Detail</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link" href="email-compose.html">Email Compose</a>
+                                            <a class="nav-link" href="pages/email-compose.html">Email Compose</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link" href="message-chat.html">Message Chat</a>
+                                            <a class="nav-link" href="pages/message-chat.html">Message Chat</a>
                                         </li>
                                     </ul>
                                 </div>
@@ -359,22 +375,22 @@ John Abraham</h5>
                                 <div id="submenu-8" class="collapse submenu" style="">
                                     <ul class="nav flex-column">
                                         <li class="nav-item">
-                                            <a class="nav-link" href="icon-fontawesome.html">FontAwesome Icons</a>
+                                            <a class="nav-link" href="pages/icon-fontawesome.html">FontAwesome Icons</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link" href="icon-material.html">Material Icons</a>
+                                            <a class="nav-link" href="pages/icon-material.html">Material Icons</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link" href="icon-simple-lineicon.html">Simpleline Icon</a>
+                                            <a class="nav-link" href="pages/icon-simple-lineicon.html">Simpleline Icon</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link" href="icon-themify.html">Themify Icon</a>
+                                            <a class="nav-link" href="pages/icon-themify.html">Themify Icon</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link" href="icon-flag.html">Flag Icons</a>
+                                            <a class="nav-link" href="pages/icon-flag.html">Flag Icons</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link" href="icon-weather.html">Weather Icon</a>
+                                            <a class="nav-link" href="pages/icon-weather.html">Weather Icon</a>
                                         </li>
                                     </ul>
                                 </div>
@@ -384,10 +400,10 @@ John Abraham</h5>
                                 <div id="submenu-9" class="collapse submenu" style="">
                                     <ul class="nav flex-column">
                                         <li class="nav-item">
-                                            <a class="nav-link" href="map-google.html">Google Maps</a>
+                                            <a class="nav-link" href="pages/map-google.html">Google Maps</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link" href="map-vector.html">Vector Maps</a>
+                                            <a class="nav-link" href="pages/map-vector.html">Vector Maps</a>
                                         </li>
                                     </ul>
                                 </div>
@@ -429,48 +445,38 @@ John Abraham</h5>
         <!-- ============================================================== -->
         <!-- wrapper  -->
         <!-- ============================================================== -->
-        <form method="post" action="../ajoutproduit.php">
+
+
+
+
+
+        <form method="post" action="ajoutpromoo.php" name="f" onsubmit="return test()">
         <div class="dashboard-wrapper">
             <div class="container-fluid dashboard-content">
                 <div class="row">
                     <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-                        <h3 class="text-center">ajouter nouveau produit</h3>
+                        <h2 class="text-center">ajouter promo</h2>
                         <table align="center" width="50%" border="0">
                             <tr>
-                                <td>nom</td>
-                                <td ><input  type="text" name="nom"></td>
+                                <td>reference</td>
+                                <td><input id="champ1" type="text" name="ref" width="100%"></td>
                             </tr>
                             <tr>
-                                <td>prix</td>
-                                <td ><input  type="number" name="prix"></td>
+                                <td>pourcentage</td>
+                                <td ><input  id="champ2" type="int" name="pourcentage"></td>
                             </tr>
                             <tr>
-                                <td>quantité</td>
-                                <td ><input  type="text" name="quantite"></td>
+                                <td>date debut</td>
+                                <td><input id="champ3" type="date" name="datedebut"></td>
                             </tr>
                             <tr>
-                                <td>ref</td>
-                                <td ><input  type="text" name="ref"></td>
-                            </tr>
-                            <tr>
-                                <td>couleur</td>
-                                <td ><input  type="text" name="couleur"></td>
-                            </tr>
-                            <tr>
-                                <td>categorie</td>
-                                <td >
-                                    <select name="categorie">
-                                        <option value="tissu">tissu</option>
-                                        <option value="galon">galon</option>
-                                        <option value="bouton">bouton</option>
-                                        <option value="strasses">strasses</option>
-                                        <option value="rideaux">accesoirs rideaux</option>
-                                    </select>
-                                </td>
+                                <td>date fin</td>
+                                <td><input id="champ4" type="date" name="datefin"></td>
                             </tr>
                             <tr>
                                 <td></td>
-                                <td ><input  type="submit" value="ajouter"></td>
+                                <td></td>
+                                <td ><input  type="submit" value="ajouter" class="btn btn-primary btn-lg btn-block"></td>
                             </tr>
                             
                         </table>

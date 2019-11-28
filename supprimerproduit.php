@@ -1,12 +1,9 @@
-<?PHP
-include "/core/produitC.php";
-$_SESSION['id']=2;
-if(isset($_SESSION['id']))
-{
-$produitC=new produitC();
-if (isset($_POST["id"])){
-	$produitC->supprimerproduit($_POST['id'],$_SESSION['id']);
-	header('Location: cart.php');
+<?php
+include "fct.php";
+
+$produit=new stockc();
+if (isset($_POST['ref'])) {
+	$produit->supprimer($_POST['ref']);
 }
-}
+
 ?>

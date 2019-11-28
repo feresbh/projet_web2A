@@ -11,10 +11,10 @@
     <link href="../assets/vendor/fonts/circular-std/style.css" rel="stylesheet">
     <link rel="stylesheet" href="../assets/libs/css/style.css">
     <link rel="stylesheet" href="../assets/vendor/fonts/fontawesome/css/fontawesome-all.css">
+    <link rel="stylesheet" href="../assets/vendor/datepicker/tempusdominus-bootstrap-4.css" />
 </head>
 
 <body>
-
     <!-- ============================================================== -->
     <!-- main wrapper -->
     <!-- ============================================================== -->
@@ -138,7 +138,7 @@ John Abraham</h5>
         <!-- ============================================================== -->
         <!-- left sidebar -->
         <!-- ============================================================== -->
-      <div class="nav-left-sidebar sidebar-dark">
+        <div class="nav-left-sidebar sidebar-dark">
             <div class="menu-list">
                 <nav class="navbar navbar-expand-lg navbar-light">
                     <a class="d-xl-none d-lg-none" href="#">Dashboard</a>
@@ -151,50 +151,50 @@ John Abraham</h5>
                                 Menu
                             </li>
                             <li class="nav-item ">
-                                <a class="nav-link active" href="#" data-toggle="collapse" aria-expanded="false" data-target="#submenu-1" aria-controls="submenu-1"><i class="fa fa-fw fa-user-circle"></i>stock <span class="badge badge-success">6</span></a>
+                                <a class="nav-link active" href="#" data-toggle="collapse" aria-expanded="false" data-target="#submenu-1" aria-controls="submenu-1"><i class="fa fa-fw fa-user-circle"></i>Dashboard <span class="badge badge-success">6</span></a>
                                 <div id="submenu-1" class="collapse submenu" style="">
                                     <ul class="nav flex-column">
                                         <li class="nav-item">
-                                            <a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false" data-target="#submenu-1-2" aria-controls="submenu-1-2">modifier produit</a>
+                                            <a class="nav-link" href="index.html" data-toggle="collapse" aria-expanded="false" data-target="#submenu-1-2" aria-controls="submenu-1-2">E-Commerce</a>
                                             <div id="submenu-1-2" class="collapse submenu" style="">
                                                 <ul class="nav flex-column">
                                                     <li class="nav-item">
-                                                        <a class="nav-link" href="../concept-master/pages/blank-page.html">ajouter produit</a>
+                                                        <a class="nav-link" href="../index.html">E Commerce Dashboard</a>
                                                     </li>
                                                     <li class="nav-item">
-                                                        <a class="nav-link" href="ecommerce-product.html">supprimer produit</a>
-                                                    </li>
-                                                    <!--<li class="nav-item">
-                                                        <a class="nav-link" href="ecommerce-product-single.html">Product Single</a>
+                                                        <a class="nav-link" href="../ecommerce-product.html">Product List</a>
                                                     </li>
                                                     <li class="nav-item">
-                                                        <a class="nav-link" href="ecommerce-product-checkout.html">Product Checkout</a>
-                                                    </li>-->
+                                                        <a class="nav-link" href="../ecommerce-product-single.html">Product Single</a>
+                                                    </li>
+                                                    <li class="nav-item">
+                                                        <a class="nav-link" href="../ecommerce-product-checkout.html">Product Checkout</a>
+                                                    </li>
                                                 </ul>
                                             </div>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link" href="dashboard-finance.html">etat stock</a>
+                                            <a class="nav-link" href="../dashboard-finance.html">Finance</a>
                                         </li>
-                                       <!-- <li class="nav-item">
-                                            <a class="nav-link" href="dashboard-sales.html">Sales</a>
-                                        </li>-->
-                                        <!--<li class="nav-item">
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="../dashboard-sales.html">Sales</a>
+                                        </li>
+                                        <li class="nav-item">
                                             <a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false" data-target="#submenu-1-1" aria-controls="submenu-1-1">Infulencer</a>
                                             <div id="submenu-1-1" class="collapse submenu" style="">
                                                 <ul class="nav flex-column">
                                                     <li class="nav-item">
-                                                        <a class="nav-link" href="dashboard-influencer.html">verifier l'etat du stock</a>
+                                                        <a class="nav-link" href="../dashboard-influencer.html">Influencer</a>
                                                     </li>
                                                     <li class="nav-item">
-                                                        <a class="nav-link" href="influencer-finder.html">Influencer Finder</a>
+                                                        <a class="nav-link" href="../influencer-finder.html">Influencer Finder</a>
                                                     </li>
                                                     <li class="nav-item">
-                                                        <a class="nav-link" href="influencer-profile.html">Influencer Profile</a>
+                                                        <a class="nav-link" href="../influencer-profile.html">Influencer Profile</a>
                                                     </li>
                                                 </ul>
                                             </div>
-                                        </li>-->
+                                        </li>
                                     </ul>
                                 </div>
                             </li>
@@ -429,55 +429,159 @@ John Abraham</h5>
         <!-- ============================================================== -->
         <!-- wrapper  -->
         <!-- ============================================================== -->
-        <form method="post" action="../ajoutproduit.php">
         <div class="dashboard-wrapper">
             <div class="container-fluid dashboard-content">
-                <div class="row">
-                    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-                        <h3 class="text-center">ajouter nouveau produit</h3>
-                        <table align="center" width="50%" border="0">
-                            <tr>
-                                <td>nom</td>
-                                <td ><input  type="text" name="nom"></td>
-                            </tr>
-                            <tr>
-                                <td>prix</td>
-                                <td ><input  type="number" name="prix"></td>
-                            </tr>
-                            <tr>
-                                <td>quantité</td>
-                                <td ><input  type="text" name="quantite"></td>
-                            </tr>
-                            <tr>
-                                <td>ref</td>
-                                <td ><input  type="text" name="ref"></td>
-                            </tr>
-                            <tr>
-                                <td>couleur</td>
-                                <td ><input  type="text" name="couleur"></td>
-                            </tr>
-                            <tr>
-                                <td>categorie</td>
-                                <td >
-                                    <select name="categorie">
-                                        <option value="tissu">tissu</option>
-                                        <option value="galon">galon</option>
-                                        <option value="bouton">bouton</option>
-                                        <option value="strasses">strasses</option>
-                                        <option value="rideaux">accesoirs rideaux</option>
-                                    </select>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td></td>
-                                <td ><input  type="submit" value="ajouter"></td>
-                            </tr>
-                            
-                        </table>
+                <div class="dashboard-forms ">
+                    <!-- ============================================================== -->
+                    <!-- pageheader  -->
+                    <!-- ============================================================== -->
+                    <div class="row">
+                        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                            <div class="page-header" id="top">
+                                <h2 class="pageheader-title">Datepicker </h2>
+                                <p class="pageheader-text">Proin placerat ante duiullam scelerisque a velit ac porta, fusce sit amet vestibulum mi. Morbi lobortis pulvinar quam.</p>
+                                <div class="page-breadcrumb">
+                                    <nav aria-label="breadcrumb">
+                                        <ol class="breadcrumb">
+                                            <li class="breadcrumb-item"><a href="#" class="breadcrumb-link">Dashboard</a></li>
+                                            <li class="breadcrumb-item"><a href="#" class="breadcrumb-link">Forms</a></li>
+                                            <li class="breadcrumb-item active" aria-current="page">Datepicker</li>
+                                        </ol>
+                                    </nav>
+                                </div>
+                            </div>
+                        </div>
                     </div>
+                    <!-- ============================================================== -->
+                    <!-- end pageheader  -->
+                    <!-- ============================================================== -->
+                    <!-- ============================================================== -->
+                    <!-- datepicker -->
+                    <!-- ============================================================== -->
+                    <div class="row">
+                        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                            <div class="card">
+                                <h5 class="card-header">DatePicker</h5>
+                                <div class="card-body">
+                                    <h5>Basic</h5>
+                                    <div class="form-group">
+                                        <div class="input-group date" id="datetimepicker1" data-target-input="nearest">
+                                            <input type="text" class="form-control datetimepicker-input" data-target="#datetimepicker1" />
+                                            <div class="input-group-append" data-target="#datetimepicker1" data-toggle="datetimepicker">
+                                                <div class="input-group-text"><i class="far fa-calendar-alt"></i></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-body border-top">
+                                    <h5>Time Only</h5>
+                                    <div class="form-group">
+                                        <div class="input-group date" id="datetimepicker2" data-target-input="nearest">
+                                            <input type="text" class="form-control datetimepicker-input" data-target="#datetimepicker2" />
+                                            <div class="input-group-append" data-target="#datetimepicker2" data-toggle="datetimepicker">
+                                                <div class="input-group-text"><i class="far fa-calendar-alt"></i></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-body border-top">
+                                    <h5>Using Locales</h5>
+                                    <div class="form-group">
+                                        <div class="input-group date" id="datetimepicker3" data-target-input="nearest">
+                                            <input type="text" class="form-control datetimepicker-input" data-target="#datetimepicker3" />
+                                            <div class="input-group-append" data-target="#datetimepicker3" data-toggle="datetimepicker">
+                                                <div class="input-group-text"><i class="far fa-clock"></i></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-body border-top">
+                                    <h5>Date Only</h5>
+                                    <div class="form-group">
+                                        <div class="input-group date" id="datetimepicker4" data-target-input="nearest">
+                                            <input type="text" class="form-control datetimepicker-input" data-target="#datetimepicker4" />
+                                            <div class="input-group-append" data-target="#datetimepicker4" data-toggle="datetimepicker">
+                                                <div class="input-group-text"><i class="far fa-calendar-alt"></i></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-body border-top">
+                                    <h5>No Icon</h5>
+                                    <input type="text" class="form-control datetimepicker-input" id="datetimepicker5" data-toggle="datetimepicker" data-target="#datetimepicker5" />
+                                </div>
+                                <div class="card-body border-top">
+                                    <h5>Enabled/Disabled Dates</h5>
+                                    <div class="form-group">
+                                        <div class="input-group date" id="datetimepicker6" data-target-input="nearest">
+                                            <input type="text" class="form-control datetimepicker-input" data-target="#datetimepicker6" />
+                                            <div class="input-group-append" data-target="#datetimepicker6" data-toggle="datetimepicker">
+                                                <div class="input-group-text"><i class="fa fa-calendar-alt"></i></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-body border-top">
+                                    <h5>Linked Pickers</h5>
+                                    <div class="form-group">
+                                        <div class="input-group date" id="datetimepicker7" data-target-input="nearest">
+                                            <input type="text" class="form-control datetimepicker-input" data-target="#datetimepicker7" />
+                                            <div class="input-group-append" data-target="#datetimepicker7" data-toggle="datetimepicker">
+                                                <div class="input-group-text"><i class="fa fa-calendar-alt"></i></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="input-group date" id="datetimepicker8" data-target-input="nearest">
+                                            <input type="text" class="form-control datetimepicker-input" data-target="#datetimepicker8" />
+                                            <div class="input-group-append" data-target="#datetimepicker8" data-toggle="datetimepicker">
+                                                <div class="input-group-text"><i class="fa fa-calendar-alt"></i></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-body border-top">
+                                    <h5>View Mode</h5>
+                                    <div class="form-group">
+                                        <div class="input-group date" id="datetimepicker10" data-target-input="nearest">
+                                            <input type="text" class="form-control datetimepicker-input" data-target="#datetimepicker10" />
+                                            <div class="input-group-append" data-target="#datetimepicker10" data-toggle="datetimepicker">
+                                                <div class="input-group-text"><i class="fa fa-calendar-alt"></i></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-body border-top">
+                                    <h5>Min View Mode</h5>
+                                    <div class="form-group">
+                                        <div class="input-group date" id="datetimepicker11" data-target-input="nearest">
+                                            <input type="text" class="form-control datetimepicker-input" data-target="#datetimepicker11" />
+                                            <div class="input-group-append" data-target="#datetimepicker11" data-toggle="datetimepicker">
+                                                <div class="input-group-text"><i class="fa fa-calendar-alt"></i></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-body border-top">
+                                    <h5>Inline</h5>
+                                    <div class="form-group">
+                                        <div class="form-group">
+                                            <div class="row">
+                                                <div class="col-md-8">
+                                                    <div id="datetimepicker13"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- ============================================================== -->
+                    <!-- end datepicker -->
+                    <!-- ============================================================== -->
                 </div>
             </div>
-            </form>
             <!-- ============================================================== -->
             <!-- footer -->
             <!-- ============================================================== -->
@@ -510,6 +614,10 @@ John Abraham</h5>
     <script src="../assets/vendor/bootstrap/js/bootstrap.bundle.js"></script>
     <script src="../assets/vendor/slimscroll/jquery.slimscroll.js"></script>
     <script src="../assets/libs/js/main-js.js"></script>
+    <script src="../assets/vendor/datepicker/moment.js"></script>
+    <script src="../assets/vendor/datepicker/tempusdominus-bootstrap-4.js"></script>
+    <script src="../assets/vendor/datepicker/datepicker.js"></script>
 </body>
+
  
 </html>
