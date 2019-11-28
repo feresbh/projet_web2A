@@ -1,61 +1,91 @@
-<?php
-include_once "/config.php";
-
+<?php 
+require_once 'C:\wamp64\www\Mon module\config.php';
 
 class clientC
-
-{	function recupererclient($id)
+{
+		public function afficherClient()
 	{
-   		$sql="SELECT * from clients where idC=$id";
+		$sql = 'SELECT * FROM utilisateur';
 		$db = config::getConnexion();
-		
-		try
-		{
-		$liste=$db->query($sql);
-		$liste->execute();
-		return $liste;
+		try {
+			$liste=$db->query($sql) ;
+			return $liste ;
+		} catch (Exception $e) {
+			die('Erreur '.$e->getMessage());
 		}
-        catch (Exception $e)
-        {
-            die('Erreur: '.$e->getMessage());
-        }
+		
 	}
 
-    function ajouterclient($client){
-        $sql="insert into clients (nom,prenom,Sexe,Pseudo,Email,mdp) values (:nom, :prenom, :Sexe, :Pseudo, :Email, :mdp)";
+	public function deleteClient($id)
+	{
+		$sql ="DELETE FROM utilisateur where idUtilisateur= :id";
+		$db = config::getConnexion();
+		$req = $db->prepare($sql);
+		$req->bindValue(':idUtilisateur',$id);
+		try {
+			$req->execute() ;
+		} catch (Exception $e) {
+			die('Erreur :'.$e->getMessage());
+		}
+	}
+
+	public function afficherClientID($id)
+	{
+		$db = config::getConnexion();
+		$sql = 'SELECT * FROM utilisateur WHERE idUtilisateur= "'.$id.'"';
+		$result = $db->query($sql);
+		return $result->fetchAll();
+		//Return array of array
+		//Index Nom du colonne de table de base de données
+	}
+	public function afficherClientEmail($id)
+	{
+		$db = config::getConnexion();
+		$sql = 'SELECT email FROM utilisateur WHERE idUtilisateur= "'.$id.'"';
+		$result = $db->query($sql);
+		return $result->fetch();
+		//Return array of array
+		//Index Nom du colonne de table de base de données
+	}
+	public function updateClientID($id,$c)
+	{
+		$db = config::getConnexion();
+	$sql = 'UPDATE utilisateur SET nom = :nom,prenom = :prenom,tel = :tel,adresse = :adresse,codePostal = :codePostal,sexe = :sexe,cin = :cin,email = :email,login = :login,password = :password,role = :role WHERE idUtilisateur = :idUtilisateur';
+		$req = $db->prepare($sql);
+		
+	$req->bindValue(':nom',$c->getnom());
+		$req->bindValue(':prenom',$c->getprenom());
+		$req->bindValue(':tel',$c->gettel());
+		$req->bindValue(':adresse',$c->getadresse());
+		$req->bindValue(':codePostal',$c->getcodePostal());
+		$req->bindValue(':sexe',$c->getsexe());
+		$req->bindValue(':cin',$c->getcin());
+		$req->bindValue(':email',$c->getemail());
+		$req->bindValue(':login',$c->getlogin());
+		$req->bindValue(':password',$c->getpassword());
+		
+	    $req->bindValue(':role',$c->getrole());
+		$req->bindValue(':idUtilisateur',$id);
+		$req->execute();
+	}
+
+	public function CountClientFemme()
+    {
         $db = config::getConnexion();
-        try{
-            $req=$db->prepare($sql);
-
-            $nom=$client->get_nom();
-            $prenom=$client->get_prenom();
-            $Sexe=$client->get_Sexe();
-            $Pseudo=$client->get_Pseudo();
-            $Email=$client->get_email();
-            $mdp=$client->get_mdp();
-
-            $req->bindValue(':nom',$nom);
-            $req->bindValue(':prenom',$prenom);
-            $req->bindValue(':Sexe',$Sexe);
-            $req->bindValue(':Pseudo',$Pseudo);
-            $req->bindValue(':Email',$Email);
-            $req->bindValue(':mdp',$mdp);
-
-            $req->execute();
-
-        }
-        catch (Exception $e){
-            echo 'Erreur: '.$e->getMessage();
-        }
-
+        $req1 = $db->query("SELECT * FROM utilisateur Where sexe='Femme'");
+        return $req1->rowCount();
     }
 
+    public function CountClientHomme()
+    {
+        $db = config::getConnexion();
+        $req1 = $db->query("SELECT * FROM utilisateur Where sexe='Homme'");
+        return $req1->rowCount();
+    }
 
-
-	function mailcommande($mail,$somme,$date)
-	{
-		$msg="Vous venez de passer une commande chez Banette le ".$date."\nSomme de la commande : ".$somme." DT\nmerci d'avoir choisi nos services.";
-		$msg=wordwrap($msg,70);
-		mail($mail, $msg, $msg);
-	}
 }
+
+
+
+
+ ?>
