@@ -1,7 +1,7 @@
 <?php
 class commande
 {
-	private $idCommande;
+	//private $idCommande;
 	private $dateCommande;
 	private $montantCommande;
 	private $etatCommande;
@@ -9,9 +9,9 @@ class commande
 	private $prixLivraison;
 	private $idClient;
 
-		public function __construct($idCommande,$dateCommande,$montantCommande,$etatCommande,$lieuLivraison,$prixLivraison,$idClient)
+		public function __construct($dateCommande,$montantCommande,$etatCommande,$lieuLivraison,$prixLivraison,$idClient)
 		{
-			$this->idCommande=$idCommande;
+			//$this->idCommande=$idCommande;
 			$this->dateCommande=$dateCommande;
 			$this->montantCommande=$montantCommande;
 			$this->etatCommande=$etatCommande;
@@ -20,15 +20,15 @@ class commande
 			$this->idClient=$idClient;
 		}
 
-		public function get_idCommande()
+		/*public function get_idCommande()
 		{
 			return $this->idCommande;
-		}
+		}*/
 
-		public function set_idCommande($idCommande)
+		/*public function set_idCommande($idCommande)
 		{
 			$this->idCommande = $idCommande;
-		}
+		}*/
 		//====================================
 
 
@@ -94,7 +94,7 @@ class commande
 			return $this->etatCommande;
 		}
 
-		public function set_etatCommande($etatCommande)
+		public function set_etatCommande($lieuLivraison)
 		{
 			$this->etatCommande = $etatCommande;
 		}
