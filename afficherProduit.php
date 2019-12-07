@@ -31,7 +31,6 @@ foreach($listeproduits as $row){
 	<input type="submit" name="supprimer" value="supprimer">
 	<input type="hidden" value="<?PHP echo $row['idProduit']; ?>" name="idProduit">
 	</form>
-
 	</td>
 	<td><a href="modifierproduit.php?idProduit=<?PHP echo $row['idProduit']; ?>">
 	Modifier</a></td>

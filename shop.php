@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,6 +15,7 @@
     <link href="css/animate.css" rel="stylesheet">
 	<link href="css/main.css" rel="stylesheet">
 	<link href="css/responsive.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="style.css">
     <!--[if lt IE 9]>
     <script src="js/html5shiv.js"></script>
     <script src="js/respond.min.js"></script>
@@ -135,12 +138,10 @@
 					</div>
 					<div class="col-sm-3">
 						<div class="search_box pull-right">
-							<input type="text" placeholder="Search"/>
-						</div>
-					</div>
-				</div>
-				</div>
-			</div>
+							<input type="text" placeholder="Search"/ >
+						
+					
+				
 	</header>
 	
 	<section id="advertisement">
@@ -153,19 +154,34 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-sm-3">
+
 					<div class="left-sidebar">
+						
+	
+
 						<h2>Catégories</h2>
+
+<?PHP
+include "../core/produitcategorieC.php";
+$produitcategorie1C=new produitcategorieC();
+$listeproduitscategorie=$produitcategorie1C->afficherproduitscategorie();
+
+//var_dump($listeproduits->fetchAll());
+?>
+<?PHP
+foreach($listeproduitscategorie as $row){
+	?>
 						<div class="panel-group category-products" id="accordian"><!--category-productsr-->
 							<div class="panel panel-default">
 								<div class="panel-heading">
 									<h4 class="panel-title">
 										<a data-toggle="collapse" data-parent="#accordian" href="#sportswear">
-											<span class="badge pull-right"><i class="fa fa-plus"></i></span>
-											Sportswear
-										</a>
+											<span class="badge pull-right" ><i class="fa fa-plus"></i></span>
+										<a href="PIPI.php"> <?PHP echo $row['nom']; ?></a>	
+										
 									</h4>
 								</div>
-								<div id="sportswear" class="panel-collapse collapse">
+								<!--<div id="sportswear" class="panel-collapse collapse">
 									<div class="panel-body">
 										<ul>
 											<li><a href="">Nike </a></li>
@@ -175,9 +191,13 @@
 											<li><a href="">ASICS </a></li>
 										</ul>
 									</div>
-								</div>
+								</div>-->
 							</div>
-							<div class="panel panel-default">
+							<?PHP
+
+}
+?>
+							<!--<div class="panel panel-default">
 								<div class="panel-heading">
 									<h4 class="panel-title">
 										<a data-toggle="collapse" data-parent="#accordian" href="#mens">
@@ -259,25 +279,29 @@
 								<div class="panel-heading">
 									<h4 class="panel-title"><a href="#">Shoes</a></h4>
 								</div>
-							</div>
+							</div>-->
 						</div><!--/category-productsr-->
+</div>
 					
 						<div class="brands_products"><!--brands_products-->
-							<h2>Brands</h2>
+							<h2>Trie des produits</h2>
 							<div class="brands-name">
-								<ul class="nav nav-pills nav-stacked">
-									<li><a href=""> <span class="pull-right">(50)</span>Acne</a></li>
-									<li><a href=""> <span class="pull-right">(56)</span>Grüne Erde</a></li>
-									<li><a href=""> <span class="pull-right">(27)</span>Albiro</a></li>
-									<li><a href=""> <span class="pull-right">(32)</span>Ronhill</a></li>
-									<li><a href=""> <span class="pull-right">(5)</span>Oddmolly</a></li>
-									<li><a href=""> <span class="pull-right">(9)</span>Boudestijn</a></li>
-									<li><a href=""> <span class="pull-right">(4)</span>Rösch creative culture</a></li>
-								</ul>
+								
+							<label>
+									
+									<select class="input-select" size="1" onChange="location = this.options[this.selectedIndex].value;">
+										<option value="shop.php?afficherproduits=1">Default</option>
+										<option value="shop.php?ProduitsTriesAA=1">Le moins cher</option><!--asc-->
+										<option value="shop.php?ProduitsTriesD=1">Le Plus cher</option>
+										<option value="shop.php?ProduitsTriesA=1">Nom(A-Z)</option>
+										<option value="shop.php?ProduitsTriesZ=1">Nom(Z-A)</option>
+										
+									</select>
+								</label>
 							</div>
 						</div><!--/brands_products-->
 						
-						<div class="price-range"><!--price-range-->
+						<!--<div class="price-range">
 							<h2>Price Range</h2>
 							<div class="well">
 								 <input type="text" class="span2" value="" data-slider-min="0" data-slider-max="600" data-slider-step="5" data-slider-value="[250,450]" id="sl2" ><br />
@@ -285,42 +309,77 @@
 							</div>
 						</div><!--/price-range-->
 						
-						<div class="shipping text-center"><!--shipping-->
-							<img src="images/home/shipping.jpg" alt="" />
-						</div><!--/shipping-->
-						
-					</div>
+						</div>
 				</div>
 				
 				<div class="col-sm-9 padding-right">
 					<div class="features_items"><!--features_items-->
 						<h2 class="title text-center">Produits</h2>
+
 							<?PHP
                                         include_once "../core/produitC.php";
-                                        $produit1C=new produitC();
-                                        $listeproduits=$produit1C->afficherProduits();
+                                        $produitc=new produitC();
+                                       
+	
+	 
+	  
+ if(isset($_GET['ProduitsTriesD']))
+	 {
+	 	$liste = $produitc->trie_desc();
+	 }
+	 else if(isset($_GET['ProduitsTriesAA']))
+	 {
+	 	$liste = $produitc->trie_asc();
+	 }
+	 else if(isset($_GET['ProduitsTriesA']))
+	 {
+	 	$liste = $produitc->trie_ascA();
+	 }
+	 else if(isset($_GET['ProduitsTriesZ']))
+	 {
+	 	$liste = $produitc->trie_descZ(); 
+	 }
+	 else
+	  {  $liste = $produitc->afficherproduits(); 
+	  }
                                         //var_dump($listeproduits->fetchAll());
                                         ?>
+                                       
                                         <?php
-                                            foreach ($listeproduits as $row) {
+
+                                            foreach ($liste as $row) {
                                     //        	$idProduit=$row['idProduit'];
 									//	$chemin="images/shop/".$idProduit.".JPG"
                                                 # code...
                                                 ?>
+
 						<div class="col-sm-4">
 						
 							<div class="product-image-wrapper">
 								<div class="single-products">
 									<div class="productinfo text-center">
 
-										<img src="images/shop/<?php echo $row['urlImage'];  ?>" alt="" />
-										<h2><td><?PHP echo $row['nom']; ?>
+										<div class=zoom>
+ <div class=image>
+ <img src="../uploads/<?php echo $row["urlImage"]; ?>" width="320" height="290" alt=Text de remplacement/>
+ </div>
+</div>
+<br>
+<br>
+										<h2><td ><a href="product-details.php"> <?PHP echo $row['nom']; ?></a>
 											
 										</td>
 </h2>
 										<p><?PHP echo $row['prix']; ?></p>
 										<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
 									</div>
+
+								<!--	<div class="product-overlay">
+										<div class="overlay-content">
+											
+											<a href="product-details.php" class="btn btn-default add-to-cart"> Quick view</a>
+										</div>
+									</div>-->
 									<!--<div class="product-overlay">
 										<div class="overlay-content">
 											<h2>$56</h2>
@@ -332,18 +391,16 @@
 									</div>-->
 								</div>
 								
-								<div class="choose">
-									<ul class="nav nav-pills nav-justified">
-										<li><a href=""><i class="fa fa-plus-square"></i>Add to wishlist</a></li>
-										<li><a href=""><i class="fa fa-plus-square"></i>Add to compare</a></li>
-									</ul>
-								</div>
 								
 							</div>
 						</div>
 <?php
                                             }
                                             ?>
+                                            
+
+   
+ 
 						<!--<div class="col-sm-4">
 							<div class="product-image-wrapper">
 								<div class="single-products">
@@ -638,7 +695,7 @@
 					</div><!--features_items-->
 				</div>
 			</div>
-		</div>
+	</div>
 	</section>
 	
 	<footer id="footer"><!--Footer-->

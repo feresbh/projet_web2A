@@ -1,31 +1,17 @@
-<?php  session_start(); 
- if (empty($_SESSION['id']))
- {
-     echo "<script type='text/javascript'>";
-echo "alert('Please Login First');
-window.location.href='login.php';";
-echo "</script>";
-     
- }
-?>
-
-
-
 <!DOCTYPE html>
 <html lang="en">
  
 <head>
+    <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Concept - Bootstrap 4 Admin Dashboard Template</title>
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="../assets/vendor/bootstrap/css/bootstrap.min.css">
     <link href="../assets/vendor/fonts/circular-std/style.css" rel="stylesheet">
     <link rel="stylesheet" href="../assets/libs/css/style.css">
     <link rel="stylesheet" href="../assets/vendor/fonts/fontawesome/css/fontawesome-all.css">
-    <link rel="stylesheet" type="text/css" href="manel.css">
-   
-<style>
+    <title>Concept - Bootstrap 4 Admin Dashboard Template</title>
+    <style>
 * {
   box-sizing: border-box;
 }
@@ -62,8 +48,6 @@ echo "</script>";
 }
 </style>
 
-    <!-- Required meta tags -->
-    
 </head>
 
 <body>
@@ -74,7 +58,7 @@ echo "</script>";
          <!-- ============================================================== -->
         <!-- navbar -->
         <!-- ============================================================== -->
-      <div class="dashboard-header">
+         <div class="dashboard-header">
             <nav class="navbar navbar-expand-lg bg-white fixed-top">
                 <a class="navbar-brand" href="../index.html">Concept</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -82,11 +66,7 @@ echo "</script>";
                 </button>
                 <div class="collapse navbar-collapse " id="navbarSupportedContent">
                     <ul class="navbar-nav ml-auto navbar-right-top">
-                        <li class="nav-item">
-                            <div id="custom-search" class="top-search-bar">
-                                <input class="form-control" type="text" placeholder="Search..">
-                            </div>
-                        </li>
+                        
                         <li class="nav-item dropdown notification">
                             <a class="nav-link nav-icons" href="#" id="navbarDropdownMenuLink1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-fw fa-bell"></i> <span class="indicator"></span></a>
                             <ul class="dropdown-menu dropdown-menu-right notification-dropdown">
@@ -203,49 +183,50 @@ John Abraham</h5>
                                 Menu
                             </li>
                             <li class="nav-item ">
-                                <a class="nav-link active" href="#" data-toggle="collapse" aria-expanded="false" data-target="#submenu-1" aria-controls="submenu-1"><i class="fa fa-fw fa-user-circle"></i>Stock <span class="badge badge-success">6</span></a>
+                                <a class="nav-link active" href="#" data-toggle="collapse" aria-expanded="false" data-target="#submenu-1" aria-controls="submenu-1"><i class="fa fa-fw fa-user-circle"></i>Dashboard <span class="badge badge-success">6</span></a>
                                 <div id="submenu-1" class="collapse submenu" style="">
                                     <ul class="nav flex-column">
                                         <li class="nav-item">
-                                            <a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false" data-target="#submenu-1-2" aria-controls="submenu-1-2">Produit</a>
+                                            <a class="nav-link" href="index.html" data-toggle="collapse" aria-expanded="false" data-target="#submenu-1-2" aria-controls="submenu-1-2">E-Commerce</a>
                                             <div id="submenu-1-2" class="collapse submenu" style="">
                                                 <ul class="nav flex-column">
                                                     <li class="nav-item">
-                                                        <a class="nav-link" href="blank-page.php">Ajouter Produit</a>
+                                                        <a class="nav-link" href="../index.html">E Commerce Dashboard</a>
                                                     </li>
                                                     <li class="nav-item">
-                                                        <a class="nav-link" href="supp.php">Supprimer Produit</a>
+                                                        <a class="nav-link" href="../ecommerce-product.html">Product List</a>
                                                     </li>
                                                     <li class="nav-item">
-                                                        <a class="nav-link" href="affichierp.php">Afficher Produit</a>
+                                                        <a class="nav-link" href="../ecommerce-product-single.html">Product Single</a>
                                                     </li>
-                                                   <!-- <li class="nav-item">
-                                                        <a class="nav-link" href="ecommerce-product-checkout.html">Product Checkout</a>
-                                                    </li>-->
+                                                    <li class="nav-item">
+                                                        <a class="nav-link" href="../ecommerce-product-checkout.html">Product Checkout</a>
+                                                    </li>
                                                 </ul>
                                             </div>
                                         </li>
-
-                                        
-                                       <!-- <li class="nav-item">
-                                            <a class="nav-link" href="dashboard-sales.html">Sales</a>
-                                        </li>-->
-                                        <!--<li class="nav-item">
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="../dashboard-finance.html">Finance</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="../dashboard-sales.html">Sales</a>
+                                        </li>
+                                        <li class="nav-item">
                                             <a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false" data-target="#submenu-1-1" aria-controls="submenu-1-1">Infulencer</a>
                                             <div id="submenu-1-1" class="collapse submenu" style="">
                                                 <ul class="nav flex-column">
                                                     <li class="nav-item">
-                                                        <a class="nav-link" href="dashboard-influencer.html">verifier l'etat du stock</a>
+                                                        <a class="nav-link" href="../dashboard-influencer.html">Influencer</a>
                                                     </li>
                                                     <li class="nav-item">
-                                                        <a class="nav-link" href="influencer-finder.html">Influencer Finder</a>
+                                                        <a class="nav-link" href="../influencer-finder.html">Influencer Finder</a>
                                                     </li>
                                                     <li class="nav-item">
-                                                        <a class="nav-link" href="influencer-profile.html">Influencer Profile</a>
+                                                        <a class="nav-link" href="../influencer-profile.html">Influencer Profile</a>
                                                     </li>
                                                 </ul>
                                             </div>
-                                        </li>-->
+                                        </li>
                                     </ul>
                                 </div>
                             </li>
@@ -486,50 +467,40 @@ John Abraham</h5>
                 <!-- pageheader -->
                 <!-- ============================================================== -->
                 <div class="row">
-                    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12" >
+                    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
                         <div class="page-header">
-                          
-                           <!-- <p class="pageheader-text">Proin placerat ante duiullam scelerisque a velit ac porta, fusce sit amet vestibulum mi. Morbi lobortis pulvinar quam.</p>
-                            <div class="page-breadcrumb">
-                                <nav aria-label="breadcrumb">
-                                    <ol class="breadcrumb">
-                                        <li class="breadcrumb-item"><a href="#" class="breadcrumb-link">Dashboard</a></li>
-                                        <li class="breadcrumb-item"><a href="#" class="breadcrumb-link">Tables</a></li>
-                                        <li class="breadcrumb-item active" aria-current="page">General Tables</li>
-                                    </ol>
-                                </nav>
-                            </div>-->
+                            
+                            <p class="pageheader-text">Proin placerat ante duiullam scelerisque a velit ac porta, fusce sit amet vestibulum mi. Morbi lobortis pulvinar quam.</p>
+                            
                         </div>
                     </div>
                 </div>
                 <!-- ============================================================== -->
                 <!-- end pageheader -->
                 <!-- ============================================================== -->
-               
+             
                     <div class="row">
                         <!-- ============================================================== -->
-                        <!-- basic table -->
+                        <!-- bar chart  -->
                         <!-- ============================================================== -->
-                        <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
+                        <div class="col-xl-3 col-lg-6 col-md-6 col-sm-12 col-12">
                         </div>
                     </div>
                             <div class="card">
-
                                 <h5 class="card-header" align="center">Produits</h5>
+                                <div class="card-body">
                                
-                                <div class="card-body" >
                                     <?PHP
                                         include "../../core/produitC.php";
                                         $produit1C=new produitC();
-                                        $listeproduits=$produit1C->afficherProduits();
+                                        $listeproduits=$produit1C->trie_quantite ();
                                         //var_dump($listeproduits->fetchAll());
                                         
                                         ?>
-                                        <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names.." title="Type in a name">
+                                          <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names.." title="Type in a name">
+                                    <table class="table" style="background-color: white;" id="myTable" >
 
-                                    <table class="table" style="background-color: white;" id="myTable">
-
-                                        
+                                        <thead>
                                             <tr>
                                                 <th scope="col">Nom</th>
                                                 <th scope="col">Id Produit</th>
@@ -538,9 +509,11 @@ John Abraham</h5>
                                                 <th scope="col">Couleur</th>
                                                 <th scope="col"> Image</th>
                                                 <th scope="col"> Id Categorie</th>
+
                                                 <th scope="col">Modifier</th>
                                             </tr>
-                                       
+                                        </thead>
+                                     
                                             <?php
                                             foreach ($listeproduits as $row) {
                                                 # code...
@@ -563,47 +536,14 @@ John Abraham</h5>
 
                                             </tr>
                                             <?php
-                                            if ($row['quantite']==0) {
-                                                require '../send/PHPMailerAutoload.php';
-            require '../send/credential.php';
-
-            $mail = new PHPMailer;
-
-            //$mail->SMTPDebug = 4;                               // Enable verbose debug output
-
-            $mail->isSMTP();                                      // Set mailer to use SMTP
-            $mail->Host = 'smtp.gmail.com';  // Specify main and backup SMTP servers
-            $mail->SMTPAuth = true;                               // Enable SMTP authentication
-            $mail->Username = EMAIL;                 // SMTP username
-            $mail->Password = PASS;                           // SMTP password
-            $mail->SMTPSecure = 'tls';                            // Enable TLS encryption, `ssl` also accepted
-            $mail->Port = 587;                                    // TCP port to connect to
-
-            $mail->setFrom(EMAIL,'MERCERIE DOUIRI');
-            $mail->addAddress('manel.redissi@esprit.tn');     // Add a recipient
-
-            $mail->addReplyTo(EMAIL);
-            // print_r($_FILES['file']); exit;
-            /*for ($i=0; $i < count($_FILES['file']['tmp_name']) ; $i++) { 
-                $mail->addAttachment($_FILES['file']['tmp_name'][$i], $_FILES['file']['name'][$i]);    // Optional name
-            }*/
-            $mail->isHTML(true);                                  // Set email format to HTML
-
-            $mail->Subject = 'STOCK';
-            $mail->Body    = 'Vérifier votre stock ! ';
-
-        
-
-
-            $mail->AltBody = ' thanks for ordering transaction ';
-            $mail->send();
-                                                
-                                            }
                                             }
                                             ?>
-                                              </table>
-                                           
-                                           <script>
+                                              
+                                            
+                                            
+                                       
+                                    </table>
+                                     <script>
 function myFunction() {
   var input, filter, table, tr, td, i, txtValue;
   input = document.getElementById("myInput");
@@ -623,9 +563,7 @@ function myFunction() {
   }
 }
 </script>
- 
-                                       
-                                    <br>
+<br>
                                     <div align="center">
                                         <input type="submit" id="impression" name="impression" onclick="imprimer_page()" value="Imprimer la page">
                                     </div>
@@ -636,272 +574,14 @@ function myFunction() {
                                     </script>
                                 </div>
                             </div>
-                        </div>
-                    </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-                    
+                        
                         <!-- ============================================================== -->
-                        <!-- end basic table -->
+                        <!-- end bar chart  -->
                         <!-- ============================================================== -->
                         <!-- ============================================================== -->
-                        <!-- striped table -->
+                        <!-- line chart  -->
                         <!-- ============================================================== -->
-                        <!--<div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
-                            <div class="card">
-                                <h5 class="card-header">Striped Table</h5>
-                                <div class="card-body">
-                                    <table class="table table-striped">
-                                        <thead>
-                                            <tr>
-                                                <th scope="col">#</th>
-                                                <th scope="col">First</th>
-                                                <th scope="col">Last</th>
-                                                <th scope="col">Handle</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <tr>
-                                                <th scope="row">1</th>
-                                                <td>Mark</td>
-                                                <td>Otto</td>
-                                                <td>@mdo</td>
-                                            </tr>
-                                            <tr>
-                                                <th scope="row">2</th>
-                                                <td>Jacob</td>
-                                                <td>Thornton</td>
-                                                <td>@fat</td>
-                                            </tr>
-                                            <tr>
-                                                <th scope="row">3</th>
-                                                <td>Larry</td>
-                                                <td>the Bird</td>
-                                                <td>@twitter</td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                </div>
-                            </div>
-                        </div>-->
-                        <!-- ============================================================== -->
-                        <!-- end striped table -->
-                        <!-- ============================================================== -->
-                    </div> 
-                   <!-- <div class="row">
-                        <!-- ============================================================== -->
-                        <!-- bordered table -->
-                        <!-- ============================================================== -->
-                       <!-- <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
-                            <div class="card">
-                                <h5 class="card-header">Bordered Table</h5>
-                                <div class="card-body">
-                                    <table class="table table-bordered">
-                                        <thead>
-                                            <tr>
-                                                <th scope="col">#</th>
-                                                <th scope="col">First</th>
-                                                <th scope="col">Last</th>
-                                                <th scope="col">Handle</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <tr>
-                                                <th scope="row">1</th>
-                                                <td>Mark</td>
-                                                <td>Otto</td>
-                                                <td>@mdo</td>
-                                            </tr>
-                                            <tr>
-                                                <th scope="row">2</th>
-                                                <td>Jacob</td>
-                                                <td>Thornton</td>
-                                                <td>@fat</td>
-                                            </tr>
-                                            <tr>
-                                                <th scope="row">3</th>
-                                                <td colspan="2">Larry the Bird</td>
-                                                <td>@twitter</td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                </div>
-                            </div>
-                        </div> -->
-                        <!-- ============================================================== -->
-                        <!-- end bordered table -->
-                        <!-- ============================================================== -->
-                        <!-- ============================================================== -->
-                        <!-- hoverable table -->
-                        <!-- ============================================================== -->
-                        <!--<div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
-                            <div class="card">
-                                <h5 class="card-header">Hoverable Table</h5>
-                                <div class="card-body">
-                                    <table class="table table-hover">
-                                        <thead>
-                                            <tr>
-                                                <th scope="col">#</th>
-                                                <th scope="col">First</th>
-                                                <th scope="col">Last</th>
-                                                <th scope="col">Handle</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <tr>
-                                                <th scope="row">1</th>
-                                                <td>Mark</td>
-                                                <td>Otto</td>
-                                                <td>@mdo</td>
-                                            </tr>
-                                            <tr>
-                                                <th scope="row">2</th>
-                                                <td>Jacob</td>
-                                                <td>Thornton</td>
-                                                <td>@fat</td>
-                                            </tr>
-                                            <tr>
-                                                <th scope="row">3</th>
-                                                <td colspan="2">Larry the Bird</td>
-                                                <td>@twitter</td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                </div>
-                            </div>
-                        </div> -->
-                        <!-- ============================================================== -->
-                        <!-- end hoverable table -->
-                        <!-- ============================================================== -->
-                    </div> 
-                   <!-- <div class="row">
-                        <!-- ============================================================== -->
-                        <!-- contextual table -->
-                        <!-- ============================================================== -->
-                       <!-- <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
-                            <div class="card">
-                                <h5 class="card-header">Contextual classes</h5>
-                                <div class="card-body">
-                                    <table class="table">
-                                        <thead>
-                                            <tr>
-                                                <th scope="col">#</th>
-                                                <th scope="col">First</th>
-                                                <th scope="col">Last</th>
-                                                <th scope="col">Handle</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <tr class="table-primary">
-                                                <th scope="row">1</th>
-                                                <td>Mark</td>
-                                                <td>Otto</td>
-                                                <td>@mdo</td>
-                                            </tr>
-                                            <tr class="table-success">
-                                                <th scope="row">2</th>
-                                                <td>Jacob</td>
-                                                <td>Thornton</td>
-                                                <td>@fat</td>
-                                            </tr>
-                                            <tr class="table-secondary">
-                                                <th scope="row">3</th>
-                                                <td colspan="2">Larry the Bird</td>
-                                                <td>@twitter</td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                </div>
-                            </div>
-                        </div> 
-                        <!-- ============================================================== -->
-                        <!-- end contextual table -->
-                        <!-- ============================================================== -->
-                        <!-- ============================================================== -->
-                        <!-- responsive table -->
-                        <!-- ============================================================== -->
-                        <!--<div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
-                            <div class="card">
-                                <h5 class="card-header">Responsive Table</h5>
-                                <div class="card-body">
-                                    <div class="table-responsive ">
-                                        <table class="table">
-                                            <thead>
-                                                <tr>
-                                                    <th scope="col">#</th>
-                                                    <th scope="col">First</th>
-                                                    <th scope="col">Last</th>
-                                                    <th scope="col">Handle</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                <tr>
-                                                    <th scope="row">1</th>
-                                                    <td>Mark</td>
-                                                    <td>Otto</td>
-                                                    <td>@mdo</td>
-                                                </tr>
-                                                <tr>
-                                                    <th scope="row">2</th>
-                                                    <td>Jacob</td>
-                                                    <td>Thornton</td>
-                                                    <td>@fat</td>
-                                                </tr>
-                                                <tr>
-                                                    <th scope="row">3</th>
-                                                    <td colspan="2">Larry the Bird</td>
-                                                    <td>@twitter</td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- ============================================================== -->
-                        <!-- end responsive table -->
-                        <!-- ============================================================== -->
-                    </div>
-               
-            </div>
-            <!-- ============================================================== -->
-            <!-- footer -->
-            <!-- ============================================================== -->
-            <div class="footer">
-                <div class="container-fluid">
-                    <div class="row">
-                        <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
-                            Copyright © 2018 Concept. All rights reserved. Dashboard by <a href="https://colorlib.com/wp/">Colorlib</a>.
-                        </div>
-                        <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
-                            <div class="text-md-right footer-links d-none d-sm-block">
-                                <a href="javascript: void(0);">About</a>
-                                <a href="javascript: void(0);">Support</a>
-                                <a href="javascript: void(0);">Contact Us</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- ============================================================== -->
-            <!-- end footer -->
-            <!-- ============================================================== -->
-        </div>
-    </div>
+                        
     <!-- ============================================================== -->
     <!-- end main wrapper -->
     <!-- ============================================================== -->
@@ -909,7 +589,8 @@ function myFunction() {
     <script src="../assets/vendor/jquery/jquery-3.3.1.min.js"></script>
     <script src="../assets/vendor/bootstrap/js/bootstrap.bundle.js"></script>
     <script src="../assets/vendor/slimscroll/jquery.slimscroll.js"></script>
-    <script src="../assets/vendor/custom-js/jquery.multi-select.html"></script>
+    <script src="../assets/vendor/charts/sparkline/jquery.sparkline.js"></script>
+    <script src="../assets/vendor/charts/sparkline/spark-js.js"></script>
     <script src="../assets/libs/js/main-js.js"></script>
 </body>
  
