@@ -1,7 +1,7 @@
 <?PHP
-include "../core/StatistiqueC.php";
-include "../entities/historique.php";
-include "../core/historiqueC2.php";
+include "../../core/StatistiqueC.php";
+include ".../../entities/historique.php";
+include "../../core/historiqueC2.php";
 echo $_POST["cin"];
 $StatistiqueC1=new StatistiqueC();
 

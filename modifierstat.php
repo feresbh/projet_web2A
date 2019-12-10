@@ -1,6 +1,6 @@
 <?PHP
-include "../entities/statistique.php";
-include "../core/statistiqueC.php";
+include "../../entities/statistique.php";
+include "../../core/statistiqueC.php";
 
 
 if (isset($_POST['modifier'])){

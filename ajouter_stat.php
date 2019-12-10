@@ -1,11 +1,3 @@
-<?PHP
-include "../../core/StatistiqueC.php";
-$statistiquec1=new StatistiqueC();
-$listestats=$statistiquec1->afficherStatistiques();
-
-//var_dump($listeEmployes->fetchAll());
-?>
-
 <?php  session_start(); 
  if (empty($_SESSION['id']))
  {
@@ -17,13 +9,11 @@ echo "</script>";
  }
 ?>
 
-
 <html lang="en">
 <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta http-equiv="refresh"  content="5">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="../assets/vendor/bootstrap/css/bootstrap.min.css">
     <link href="../assets/vendor/fonts/circular-std/style.css" rel="stylesheet">
@@ -194,10 +184,8 @@ John Abraham</h5>
                                     </ul>
                                 </div>
                             </li>
-
-
-
-                            <li class="nav-item">
+                            
+                        <li class="nav-item">
                                             <a >|</a>
 
  </li>                       
@@ -233,9 +221,7 @@ John Abraham</h5>
   <li class="nav-item">
                                             <a style="font-size: 30px; " href="http://localhost/wetransfer/back_integre/views/">Menu Principal</a>
 
- </li>   
-                            
-                            
+ </li>       
                             
                             
                             
@@ -268,7 +254,7 @@ John Abraham</h5>
                                     <ol class="breadcrumb">
                                         <li class="breadcrumb-item"><a href="#" class="breadcrumb-link">Menu</a></li>
                                         <li class="breadcrumb-item"><a href="#" class="breadcrumb-link">Statistique</a></li>
-                                        <li class="breadcrumb-item active" aria-current="page">Tableau Statistique</li>
+                                        <li class="breadcrumb-item active" aria-current="page">Ajouter Statistique</li>
                                     </ol>
                                 </nav>
                             </div>
@@ -282,7 +268,7 @@ John Abraham</h5>
 <div class="col-xl-6 col-lg-6 col-md-126 col-sm-12 col-12">
                                 <div class="card">
                                     <div class="card-header d-flex">
-                                        <h4 class="card-header-title ">Tableau Statistique</h4>
+                                        <h4 class="card-header-title ">Ajouter Statistique</h4>
 
                                         <div class="toolbar card-toolbar-tabs  ml-auto">
                                             <ul class="nav nav-pills" id="pills-tab" role="tablist">
@@ -295,58 +281,30 @@ John Abraham</h5>
                                     <div class="card-body">
                                         <div class="tab-content mb-3" id="pills-tabContent">
                                                <div class="card-body">
-<table id="example" class="table table-striped table-bordered" style="width:100%">
-        <thead>
-            <tr>
-                <th>Id</th>
-                <th>Libelle</th>
-                <th>Description</th>
-                <th>Categorie</th>                
-                <th>Supprimer</th>
-                <th>Modifier</th>
-            </tr>
-        </thead>
-        <tbody>
-             <?PHP
+                                              
+                                                <form name="f" class="" method="Post" action="ajoutStatistique.php">
 
-foreach($listestats as $row){
-    
-  ?>
-            <tr>
-                <td><?PHP echo $row['id']; ?></td>
-                <td><?PHP echo $row['Libelle']; ?></td>
-                <td><?PHP echo $row['Description']; ?></td>
-                <td><?PHP echo $row['Categorie']; ?></td>
-                  <td>
+
+                                                    <div class="position-relative form-group"><label for="exampleEmail" class="">Libelle : </label><input name="Libelle" id="lib" placeholder="Libelle..." type="text" class="form-control"></div>
+                                                    <div class="position-relative form-group"><label for="exampleEmail" class="">Description : </label><input name="Description" id="des" placeholder="Description..." type="text" class="form-control"></div>
+                                                                                                                                    
+                                                    <div class="position-relative form-group"><label for="exampleSelect" class="">Select</label>
+                                                        <select name="select" id="exampleSelect" class="form-control">
+                                                        <option>Stock</option>
+                                                        <option>Client</option>
+                                                        <option>Commande</option>
+                                                        <option>Promotion</option>
+                                                    
+                                                    </select></div>
+                                                 
+                                                      
+                                       <button type="submit" name="ajouter" value="ajouter" id="ajout" class="btn btn-primary">ajouter</button> 
 
 
 
-<form method="POST" action="supprimerstatistique.php">
+                                                
+                                                </form>
 
-
-
-                                  
-   <input type="submit" name="supprimer" value="supprimer"class='btn btn-danger btn-sm'>
-    <input type="hidden" value="<?PHP echo $row['id']; ?>" name="cin">       
-
-
-  </form>
-
-
-
-  </td>
-
-    <td>
-        <a class="btn btn-primary"  href="modifierstatistique.php?id=<?PHP echo $row['id']; ?>"> Modifier</a></td>
-            </tr>
-              <?PHP
-}
-?>
-        </tbody>
-
-    </table>
-
-                                         
                                         
                                     </div>
                                 </div>
@@ -360,11 +318,25 @@ foreach($listestats as $row){
                     </div>
                
             </div>
-
             <!-- ============================================================== -->
             <!-- footer -->
             <!-- ============================================================== -->
-
+            <div class="footer">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
+                            Copyright © 2018 Concept. All rights reserved. Dashboard by <a href="https://colorlib.com/wp/">Colorlib</a>.
+                        </div>
+                        <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
+                            <div class="text-md-right footer-links d-none d-sm-block">
+                                <a href="javascript: void(0);">About</a>
+                                <a href="javascript: void(0);">Support</a>
+                                <a href="javascript: void(0);">Contact Us</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
             <!-- ============================================================== -->
             <!-- end footer -->
             <!-- ============================================================== -->
@@ -384,6 +356,72 @@ foreach($listestats as $row){
  
 
 
+ <script>
+    $(function(){
+     $("#ajout").click(function()
+     {
+  
+     valid=true;
+         if($("#lib").val() == ""){
+             alert("Veuillez entrer votre Libelle");
+             valid= false;
+         }
+         else if(!$("#lib").val().match(/^[a-z]+$/i))
+         {
+        alert("champ alphabetique");
+             valid= false;
+         }
+         else if($("#des").val() == ""){
+             alert("Veuillez entrer votre Description");
+             valid= false;
+         }
+                  else if(!$("#des").val().match(/^[a-z]+$/i))
+         {
+        alert("champ alphabetique");
+             valid= false;
+         }
+         else{
+          alert("Statistique ajoutée");
+          notifyMe();
+         }
+         return valid;
+     });
+      
+     
+     });
+  </script>
+
+<script type="text/javascript">
+  function notifyMe() {
+  if (!("Notification" in window)) {
+    alert("This browser does not support system notifications");
+  }
+  else if (Notification.permission === "granted") {
+    notify();
+  }
+  else if (Notification.permission !== 'denied') {
+    Notification.requestPermission(function (permission) {
+      if (permission === "granted") {
+        notify();
+      }
+    });
+  }
+  
+  function notify() {
+    var notification = new Notification('Statistique', {
+      icon: '../notifier.png',
+      body: "Hey! stat ajoutée avec succés!",
+
+    });
+
+    notification.onclick = function () {
+      window.location.replace("ajouter_stat.html");      
+    };
+    setTimeout(notification.close.bind(notification), 7000); 
+  }
+
+}
+</script>
 
 
 
