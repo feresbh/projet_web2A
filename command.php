@@ -7,7 +7,27 @@
 
   include_once "core/clientC.php";
   include_once "entities/clients.php";
+  require __DIR__ . '/vendor/autoload.php';
+	use Twilio\Rest\Client;
+ // Your Account SID and Auth Token from twilio.com/console
+$account_sid = 'AC15fad97ac1bc4c27ce11dc0a778a8f9e';
+$auth_token = '7ffdf57f269df2113c78a08046af897c';
+// In production, these should be environment variables. E.g.:
+// $auth_token = $_ENV["TWILIO_AUTH_TOKEN"]
 
+// A Twilio number you own with SMS capabilities
+$twilio_number = "+12516470958";
+
+$client = new Client($account_sid, $auth_token);
+$client->messages->create(
+    // Where to send a text message (your cell phone?)
+    '+21652117548',
+    array(
+        'from' => $twilio_number,
+        'body' => 'Votre commande est confirmée avec succés'
+    )
+);
+  //require ('sendemail.php');
   require ('pdf/fpdf.php');
 session_start();
 $_SESSION['id']=2;
@@ -27,7 +47,7 @@ if(isset($_SESSION['id']))
     $somme+=$row['prix']*$row['quantite'];
   }
   
- // if(isset($_POST['validercommande'])  )
+  if(isset($_POST['validercommande'])  )
   {
     $secteur=$_POST['secteur'];
     $dateactuelle = date("Y-m-d");
@@ -56,7 +76,9 @@ if(isset($_SESSION['id']))
       $produit2=new produit($row["id"],$row["nom"],$row["prix"],$row["quantite"],"Test");
       $produitC->ajoutercontenupanier($produit2,$max_row,$_SESSION['id']);
     }
-     header('Location: testpdf.php');;
+     header('Location: testpdf.php');
+    
+   
   }
 ?>
 
@@ -391,7 +413,7 @@ if(isset($_SESSION['id']))
 
 									<tr class="shipping-cost">
 										<td>Shipping Cost</td>
-										<td><?php echo ($somme*1.18)." DT"; ?></td>									
+										<td><?php echo ($somme*0.18)." DT"; ?></td>									
 									</tr>
 									<tr>
 										<td>Date :</td>
